@@ -6,12 +6,12 @@ Current active result version: **corrected Gemini judge + 4 participant models**
 
 Participant models:
 - `GPT 5.2`
-- `Claude-Sonnet-4.6-hq`
+- `Claude-Sonnet-4.6`
 - `GLM-5`
 - `DeepSeek-V3.2`
 
 Judge:
-- `Gemini-3.1-Pro-Preview-Third` as the non-participant judge (holistic pairwise verdict remains the canonical protocol).
+- `Gemini-3.1-Pro-Preview` as the non-participant judge (holistic pairwise verdict remains the canonical protocol).
 
 ## Current evidence files
 
@@ -48,7 +48,7 @@ Data construction and provenance:
 
 ## Current headline results
 
-- Corrected holistic main experiment: `2400/2400` ordered judgments, `1200/1200` folded cases, `950/250` stable/unstable; corrected BT and Condorcet preserve `GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 > DeepSeek-V3.2`; the modal full ordering is recovered in all `10,000` case-bootstrap replicates.
+- Corrected holistic main experiment: `2400/2400` ordered judgments, `1200/1200` folded cases, `950/250` stable/unstable; corrected BT and Condorcet preserve `GPT 5.2 > Claude-Sonnet-4.6 > GLM-5 > DeepSeek-V3.2`; the modal full ordering is recovered in all `10,000` case-bootstrap replicates.
 - Dimension-decomposed audit: `188/188` valid judgments; structured overall agrees with holistic on `152/180` (`84.4%`), is order-consistent on `65/90` cases (`72.2%`), and selects the real answer on `8/8` hidden controls.
 - Human calibration: `20` neighborhood cases, `90` real pairs, `4` hidden controls, `3` annotators; `34/39` (`87.2%`) decisive stable human majorities agree with corrected Gemini; human BT recovers the corrected ordering; agreement remains modest.
 - Controlled clear single-field manipulation check: `120/120` valid judgments; clean answers win `40/40` ordered comparisons per target dimension; mean target-score drops `1.725` / `2.000` / `1.950`.

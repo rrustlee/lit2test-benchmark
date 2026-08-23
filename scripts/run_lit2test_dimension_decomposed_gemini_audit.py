@@ -42,7 +42,7 @@ WINNERS = {"A", "B", "tie"}
 CONFIDENCES = {"low", "medium", "high"}
 PARTICIPANT_MODELS = {
     "GPT 5.2",
-    "Claude-Sonnet-4.6-hq",
+    "Claude-Sonnet-4.6",
     "GLM-5",
     "DeepSeek-V3.2",
 }

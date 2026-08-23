@@ -15,7 +15,7 @@
 | GPT 5.2 | 977 | 223 | 0 | 975 | 225 | 0 |
 | GLM-5 | 372 | 828 | 0 | 375 | 825 | 0 |
 | DeepSeek-V3.2 | 223 | 977 | 0 | 222 | 978 | 0 |
-| Claude-Sonnet-4.6-hq | 828 | 372 | 0 | 828 | 372 | 0 |
+| Claude-Sonnet-4.6 | 828 | 372 | 0 | 828 | 372 | 0 |
 
 - Old winner side counts: `{'A': 1430, 'B': 970, 'tie': 0}`
 - Corrected winner side counts: `{'A': 1440, 'B': 960, 'tie': 0}`
@@ -24,10 +24,10 @@
 
 | Model pair | Old wins/ties | Corrected wins/ties |
 |---|---|---|
-| `DeepSeek-V3.2 | Claude-Sonnet-4.6-hq` | DeepSeek-V3.2 45, Claude-Sonnet-4.6-hq 355; tie 0 | DeepSeek-V3.2 45, Claude-Sonnet-4.6-hq 355; tie 0 |
-| `GLM-5 | Claude-Sonnet-4.6-hq` | GLM-5 75, Claude-Sonnet-4.6-hq 325; tie 0 | GLM-5 75, Claude-Sonnet-4.6-hq 325; tie 0 |
+| `DeepSeek-V3.2 | Claude-Sonnet-4.6` | DeepSeek-V3.2 45, Claude-Sonnet-4.6 355; tie 0 | DeepSeek-V3.2 45, Claude-Sonnet-4.6 355; tie 0 |
+| `GLM-5 | Claude-Sonnet-4.6` | GLM-5 75, Claude-Sonnet-4.6 325; tie 0 | GLM-5 75, Claude-Sonnet-4.6 325; tie 0 |
 | `GLM-5 | DeepSeek-V3.2` | GLM-5 244, DeepSeek-V3.2 156; tie 0 | GLM-5 247, DeepSeek-V3.2 153; tie 0 |
-| `GPT 5.2 | Claude-Sonnet-4.6-hq` | GPT 5.2 252, Claude-Sonnet-4.6-hq 148; tie 0 | GPT 5.2 252, Claude-Sonnet-4.6-hq 148; tie 0 |
+| `GPT 5.2 | Claude-Sonnet-4.6` | GPT 5.2 252, Claude-Sonnet-4.6 148; tie 0 | GPT 5.2 252, Claude-Sonnet-4.6 148; tie 0 |
 | `GPT 5.2 | DeepSeek-V3.2` | GPT 5.2 378, DeepSeek-V3.2 22; tie 0 | GPT 5.2 376, DeepSeek-V3.2 24; tie 0 |
 | `GPT 5.2 | GLM-5` | GPT 5.2 347, GLM-5 53; tie 0 | GPT 5.2 347, GLM-5 53; tie 0 |
 
@@ -38,24 +38,24 @@
 | GPT 5.2 | 1.275066 | [1.145490, 1.415133] | 1.265050 | [1.135133, 1.403131] |
 | GLM-5 | -0.743604 | [-0.872830, -0.621847] | -0.731306 | [-0.856724, -0.611949] |
 | DeepSeek-V3.2 | -1.275066 | [-1.421077, -1.142956] | -1.276136 | [-1.422736, -1.146037] |
-| Claude-Sonnet-4.6-hq | 0.743604 | [0.622878, 0.872715] | 0.742392 | [0.622307, 0.870320] |
+| Claude-Sonnet-4.6 | 0.743604 | [0.622878, 0.872715] | 0.742392 | [0.622307, 0.870320] |
 
-- Old modal ranking: `GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 > DeepSeek-V3.2` (1.0000)
-- Corrected modal ranking: `GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 > DeepSeek-V3.2` (1.0000)
-- Top-5 old: `{'GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 > DeepSeek-V3.2': 10000}`
-- Top-5 corrected: `{'GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 > DeepSeek-V3.2': 10000}`
+- Old modal ranking: `GPT 5.2 > Claude-Sonnet-4.6 > GLM-5 > DeepSeek-V3.2` (1.0000)
+- Corrected modal ranking: `GPT 5.2 > Claude-Sonnet-4.6 > GLM-5 > DeepSeek-V3.2` (1.0000)
+- Top-5 old: `{'GPT 5.2 > Claude-Sonnet-4.6 > GLM-5 > DeepSeek-V3.2': 10000}`
+- Top-5 corrected: `{'GPT 5.2 > Claude-Sonnet-4.6 > GLM-5 > DeepSeek-V3.2': 10000}`
 
 ## Condorcet
 
-- Old: winner `GPT 5.2`, transitive `True`, beat counts `{'GPT 5.2': 3, 'GLM-5': 1, 'DeepSeek-V3.2': 0, 'Claude-Sonnet-4.6-hq': 2}`
-- Corrected: winner `GPT 5.2`, transitive `True`, beat counts `{'GPT 5.2': 3, 'GLM-5': 1, 'DeepSeek-V3.2': 0, 'Claude-Sonnet-4.6-hq': 2}`
+- Old: winner `GPT 5.2`, transitive `True`, beat counts `{'GPT 5.2': 3, 'GLM-5': 1, 'DeepSeek-V3.2': 0, 'Claude-Sonnet-4.6': 2}`
+- Corrected: winner `GPT 5.2`, transitive `True`, beat counts `{'GPT 5.2': 3, 'GLM-5': 1, 'DeepSeek-V3.2': 0, 'Claude-Sonnet-4.6': 2}`
 
 ## Folded sensitivity
 
 | Scope | Stable | Unstable | Folded BT ranking |
 |---|---:|---:|---|
-| Old | 959 | 241 | `GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 > DeepSeek-V3.2` |
-| Corrected | 950 | 250 | `GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 > DeepSeek-V3.2` |
+| Old | 959 | 241 | `GPT 5.2 > Claude-Sonnet-4.6 > GLM-5 > DeepSeek-V3.2` |
+| Corrected | 950 | 250 | `GPT 5.2 > Claude-Sonnet-4.6 > GLM-5 > DeepSeek-V3.2` |
 
 65-case stability transitions: `{'order-stable -> order-stable': 48, 'order-stable -> order-unstable': 11, 'order-unstable -> order-unstable': 4, 'order-unstable -> order-stable': 2}`; changed labels: `13`.
 

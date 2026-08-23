@@ -35,9 +35,9 @@ The human-visible context and original A/B answers are unchanged. These cases re
 
 | Model pair | Stable | Unstable | Total |
 |---|---:|---:|---:|
-| `Claude-Sonnet-4.6-hq | DeepSeek-V3.2` | 177 | 23 | 200 |
-| `Claude-Sonnet-4.6-hq | GLM-5` | 161 | 39 | 200 |
-| `Claude-Sonnet-4.6-hq | GPT 5.2` | 128 | 72 | 200 |
+| `Claude-Sonnet-4.6 | DeepSeek-V3.2` | 177 | 23 | 200 |
+| `Claude-Sonnet-4.6 | GLM-5` | 161 | 39 | 200 |
+| `Claude-Sonnet-4.6 | GPT 5.2` | 128 | 72 | 200 |
 | `DeepSeek-V3.2 | GLM-5` | 139 | 61 | 200 |
 | `DeepSeek-V3.2 | GPT 5.2` | 184 | 16 | 200 |
 | `GLM-5 | GPT 5.2` | 161 | 39 | 200 |

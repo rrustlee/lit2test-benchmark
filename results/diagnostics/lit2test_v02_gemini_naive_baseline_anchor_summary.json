@@ -2,7 +2,7 @@
   "status": "pass",
   "policy": "gemini_naive_baseline_anchor_no_release_no_leaderboard",
   "api_use": true,
-  "judge": "Gemini-3.1-Pro-Preview-Third (non-participant)",
+  "judge": "Gemini-3.1-Pro-Preview (non-participant)",
   "experiment": "#13 real model outputs vs schema-valid NaiveKeywordBaseline, 40 contexts x 4 models x 2 order",
   "task_file": "outputs/lit2test_v02_gemini_naive_baseline_anchor/pairwise_blind/pairwise_tasks.jsonl",
   "reverse_task_file": "outputs/lit2test_v02_gemini_naive_baseline_anchor/pairwise_blind_reverse/pairwise_tasks.jsonl",
@@ -52,7 +52,7 @@
         "model": 80
       }
     },
-    "Claude-Sonnet-4.6-hq": {
+    "Claude-Sonnet-4.6": {
       "pairs": 40,
       "folded": {
         "real_stable_win": 40
@@ -143,10 +143,10 @@
   },
   "cases": [
     {
-      "pair_id": "smallari_expansion40_008_graph_networks_message_passing_representation__v02_expansion40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_expansion40_008_graph_networks_message_passing_representation__v02_expansion40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_expansion40_008_graph_networks_message_passing_representation__v02_expansion40",
       "batch": "expansion40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -195,10 +195,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_expansion40_013_motion_generation_human_editing_flow__v02_expansion40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_expansion40_013_motion_generation_human_editing_flow__v02_expansion40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_expansion40_013_motion_generation_human_editing_flow__v02_expansion40",
       "batch": "expansion40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -247,10 +247,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_expansion40_024_causal_language_inference_discovery_graph__v02_expansion40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_expansion40_024_causal_language_inference_discovery_graph__v02_expansion40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_expansion40_024_causal_language_inference_discovery_graph__v02_expansion40",
       "batch": "expansion40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -299,10 +299,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_expansion40_027_instruction_language_tuning_instruction_followin__v02_expansion40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_expansion40_027_instruction_language_tuning_instruction_followin__v02_expansion40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_expansion40_027_instruction_language_tuning_instruction_followin__v02_expansion40",
       "batch": "expansion40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -351,10 +351,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_expansion40_028_multi_modal_uni_modal_discriminative_pre_trained__v02_expansion40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_expansion40_028_multi_modal_uni_modal_discriminative_pre_trained__v02_expansion40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_expansion40_028_multi_modal_uni_modal_discriminative_pre_trained__v02_expansion40",
       "batch": "expansion40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -403,10 +403,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_expansion40_031_preference_language_optimization_direct_reward__v02_expansion40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_expansion40_031_preference_language_optimization_direct_reward__v02_expansion40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_expansion40_031_preference_language_optimization_direct_reward__v02_expansion40",
       "batch": "expansion40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -455,10 +455,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_expansion40_034_equivariant_networks_breaking_symmetry_simple__v02_expansion40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_expansion40_034_equivariant_networks_breaking_symmetry_simple__v02_expansion40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_expansion40_034_equivariant_networks_breaking_symmetry_simple__v02_expansion40",
       "batch": "expansion40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -507,10 +507,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_expansion40_040_critic_reinforcement_actor_critic_actor_continuo__v02_expansion40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_expansion40_040_critic_reinforcement_actor_critic_actor_continuo__v02_expansion40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_expansion40_040_critic_reinforcement_actor_critic_actor_continuo__v02_expansion40",
       "batch": "expansion40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -559,10 +559,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_fifth40_001_machine_unlearning_remove_while_existing__v02_fifth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_fifth40_001_machine_unlearning_remove_while_existing__v02_fifth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_fifth40_001_machine_unlearning_remove_while_existing__v02_fifth40",
       "batch": "fifth40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -611,10 +611,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_fifth40_008_anomaly_detection_diffusion_anomalies_denoising__v02_fifth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_fifth40_008_anomaly_detection_diffusion_anomalies_denoising__v02_fifth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_fifth40_008_anomaly_detection_diffusion_anomalies_denoising__v02_fifth40",
       "batch": "fifth40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -663,10 +663,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_fifth40_012_cloud_point_understanding_demonstrate_clouds__v02_fifth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_fifth40_012_cloud_point_understanding_demonstrate_clouds__v02_fifth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_fifth40_012_cloud_point_understanding_demonstrate_clouds__v02_fifth40",
       "batch": "fifth40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -715,10 +715,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_fifth40_013_test_time_adaptation_distribution_shift_aware_sh__v02_fifth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_fifth40_013_test_time_adaptation_distribution_shift_aware_sh__v02_fifth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_fifth40_013_test_time_adaptation_distribution_shift_aware_sh__v02_fifth40",
       "batch": "fifth40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -767,10 +767,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_fifth40_018_policy_offline_behavior_reinforcement_diffusion__v02_fifth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_fifth40_018_policy_offline_behavior_reinforcement_diffusion__v02_fifth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_fifth40_018_policy_offline_behavior_reinforcement_diffusion__v02_fifth40",
       "batch": "fifth40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -819,10 +819,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_fifth40_026_privacy_attacks_leakage_privacy_preserving_fake__v02_fifth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_fifth40_026_privacy_attacks_leakage_privacy_preserving_fake__v02_fifth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_fifth40_026_privacy_attacks_leakage_privacy_preserving_fake__v02_fifth40",
       "batch": "fifth40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -871,10 +871,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_fifth40_029_in_context_language_context_however_information__v02_fifth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_fifth40_029_in_context_language_context_however_information__v02_fifth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_fifth40_029_in_context_language_context_however_information__v02_fifth40",
       "batch": "fifth40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -923,10 +923,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_fifth40_037_prediction_link_graph_node_similarity__v02_fifth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_fifth40_037_prediction_link_graph_node_similarity__v02_fifth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_fifth40_037_prediction_link_graph_node_similarity__v02_fifth40",
       "batch": "fifth40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -975,10 +975,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_fourth40_004_conformal_uncertainty_prediction_control_predict__v02_fourth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_fourth40_004_conformal_uncertainty_prediction_control_predict__v02_fourth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_fourth40_004_conformal_uncertainty_prediction_control_predict__v02_fourth40",
       "batch": "fourth40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -1027,10 +1027,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_fourth40_006_skill_discovery_long_horizon_diverse_skills__v02_fourth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_fourth40_006_skill_discovery_long_horizon_diverse_skills__v02_fourth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_fourth40_006_skill_discovery_long_horizon_diverse_skills__v02_fourth40",
       "batch": "fourth40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -1079,10 +1079,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_fourth40_012_audio_generation_natural_language_sounds__v02_fourth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_fourth40_012_audio_generation_natural_language_sounds__v02_fourth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_fourth40_012_audio_generation_natural_language_sounds__v02_fourth40",
       "batch": "fourth40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -1131,10 +1131,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_fourth40_020_low_rank_across_gradients_matrices_layers__v02_fourth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_fourth40_020_low_rank_across_gradients_matrices_layers__v02_fourth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_fourth40_020_low_rank_across_gradients_matrices_layers__v02_fourth40",
       "batch": "fourth40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -1183,10 +1183,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_fourth40_022_language_speech_understanding_llm_speak__v02_fourth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_fourth40_022_language_speech_understanding_llm_speak__v02_fourth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_fourth40_022_language_speech_understanding_llm_speak__v02_fourth40",
       "batch": "fourth40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -1235,10 +1235,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_fourth40_027_optimization_preference_language_direct_proximal__v02_fourth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_fourth40_027_optimization_preference_language_direct_proximal__v02_fourth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_fourth40_027_optimization_preference_language_direct_proximal__v02_fourth40",
       "batch": "fourth40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -1287,10 +1287,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_fourth40_038_clip_language_image_contrastive_feedback_helps__v02_fourth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_fourth40_038_clip_language_image_contrastive_feedback_helps__v02_fourth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_fourth40_038_clip_language_image_contrastive_feedback_helps__v02_fourth40",
       "batch": "fourth40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -1339,10 +1339,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_fourth40_039_federated_client_clients_such_global__v02_fourth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_fourth40_039_federated_client_clients_such_global__v02_fourth40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_fourth40_039_federated_client_clients_such_global__v02_fourth40",
       "batch": "fourth40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -1391,10 +1391,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_next40_004_autoencoders_sparse_interpretability_find_saes__v02_next40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_next40_004_autoencoders_sparse_interpretability_find_saes__v02_next40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_next40_004_autoencoders_sparse_interpretability_find_saes__v02_next40",
       "batch": "next40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -1443,10 +1443,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_next40_007_reinforcement_offline_outperforms_policy_unsuper__v02_next40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_next40_007_reinforcement_offline_outperforms_policy_unsuper__v02_next40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_next40_007_reinforcement_offline_outperforms_policy_unsuper__v02_next40",
       "batch": "next40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -1495,10 +1495,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_next40_012_bayesian_optimization_gaussian_high_dimensional___v02_next40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_next40_012_bayesian_optimization_gaussian_high_dimensional___v02_next40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_next40_012_bayesian_optimization_gaussian_high_dimensional___v02_next40",
       "batch": "next40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -1547,10 +1547,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_next40_013_multi_view_fusion_clustering_trusted_evolutionar__v02_next40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_next40_013_multi_view_fusion_clustering_trusted_evolutionar__v02_next40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_next40_013_multi_view_fusion_clustering_trusted_evolutionar__v02_next40",
       "batch": "next40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -1599,10 +1599,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_next40_020_quantization_language_mixed_precision_llm_signif__v02_next40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_next40_020_quantization_language_mixed_precision_llm_signif__v02_next40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_next40_020_quantization_language_mixed_precision_llm_signif__v02_next40",
       "batch": "next40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -1651,10 +1651,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_next40_024_experts_mixture_of_experts_moe_mixture_expert__v02_next40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_next40_024_experts_mixture_of_experts_moe_mixture_expert__v02_next40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_next40_024_experts_mixture_of_experts_moe_mixture_expert__v02_next40",
       "batch": "next40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -1703,10 +1703,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_next40_037_language_long_context_context_how_long__v02_next40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_next40_037_language_long_context_context_how_long__v02_next40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_next40_037_language_long_context_context_how_long__v02_next40",
       "batch": "next40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -1755,10 +1755,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_next40_038_transport_optimal_sliced_spherical_comparing__v02_next40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_next40_038_transport_optimal_sliced_spherical_comparing__v02_next40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_next40_038_transport_optimal_sliced_spherical_comparing__v02_next40",
       "batch": "next40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -1807,10 +1807,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_third40_001_unlearning_continual_machine_existing_however__v02_third40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_third40_001_unlearning_continual_machine_existing_however__v02_third40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_third40_001_unlearning_continual_machine_existing_however__v02_third40",
       "batch": "third40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -1859,10 +1859,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_third40_005_out_of_distribution_detection_adversarial_synthe__v02_third40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_third40_005_out_of_distribution_detection_adversarial_synthe__v02_third40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_third40_005_out_of_distribution_detection_adversarial_synthe__v02_third40",
       "batch": "third40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -1911,10 +1911,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_third40_008_anomaly_detection_deep_classification_abnormallo__v02_third40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_third40_008_anomaly_detection_deep_classification_abnormallo__v02_third40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_third40_008_anomaly_detection_deep_classification_abnormallo__v02_third40",
       "batch": "third40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -1963,10 +1963,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_third40_021_multi_agent_reinforcement_agents_trajectory_life__v02_third40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_third40_021_multi_agent_reinforcement_agents_trajectory_life__v02_third40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_third40_021_multi_agent_reinforcement_agents_trajectory_life__v02_third40",
       "batch": "third40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -2015,10 +2015,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_third40_027_point_cloud_clouds_semantic_cross_modal__v02_third40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_third40_027_point_cloud_clouds_semantic_cross_modal__v02_third40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_third40_027_point_cloud_clouds_semantic_cross_modal__v02_third40",
       "batch": "third40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -2067,10 +2067,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_third40_034_generation_text_to_3d_distillation_quality_retri__v02_third40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_third40_034_generation_text_to_3d_distillation_quality_retri__v02_third40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_third40_034_generation_text_to_3d_distillation_quality_retri__v02_third40",
       "batch": "third40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -2119,10 +2119,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_third40_037_language_multimodal_mathematical_multi_modal_mll__v02_third40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_third40_037_language_multimodal_mathematical_multi_modal_mll__v02_third40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_third40_037_language_multimodal_mathematical_multi_modal_mll__v02_third40",
       "batch": "third40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",
@@ -2171,10 +2171,10 @@
       "reverse_confidence": "high"
     },
     {
-      "pair_id": "smallari_third40_040_in_context_between_instruction_tuning_how__v02_third40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6-hq",
+      "pair_id": "smallari_third40_040_in_context_between_instruction_tuning_how__v02_third40__NaiveKeywordBaseline__vs__Claude-Sonnet-4.6",
       "context_id": "smallari_third40_040_in_context_between_instruction_tuning_how__v02_third40",
       "batch": "third40",
-      "model": "Claude-Sonnet-4.6-hq",
+      "model": "Claude-Sonnet-4.6",
       "blind_arm": "model",
       "reverse_arm": "model",
       "folded": "real_stable_win",

@@ -57,7 +57,7 @@ BATCHES = {
 
 MODELS = {
     "GPT 5.2": "generations_gpt52",
-    "Claude-Sonnet-4.6-hq": "generations_sonnet46",
+    "Claude-Sonnet-4.6": "generations_sonnet46",
     "GLM-5": "generations_glm5",
     "DeepSeek-V3.2": "generations_deepseek_v32",
 }
@@ -514,7 +514,7 @@ def summarize(_: argparse.Namespace) -> None:
         "status": status,
         "policy": "gemini_naive_baseline_anchor_no_release_no_leaderboard",
         "api_use": True,
-        "judge": "Gemini-3.1-Pro-Preview-Third (non-participant)",
+        "judge": "Gemini-3.1-Pro-Preview (non-participant)",
         "experiment": "#13 real model outputs vs schema-valid NaiveKeywordBaseline, 40 contexts x 4 models x 2 order",
         "task_file": rel(TASKS),
         "reverse_task_file": rel(TASKS_REV),

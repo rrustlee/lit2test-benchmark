@@ -18,7 +18,7 @@ from itertools import combinations
 from pathlib import Path
 
 IB = Path("${PROJECT_ROOT}")
-SONNET = "Claude-Sonnet-4.6-hq"
+SONNET = "Claude-Sonnet-4.6"
 OPPONENTS = ["GPT 5.2", "GLM-5", "DeepSeek-V3.2"]
 ALL4 = ["GPT 5.2", "GLM-5", "DeepSeek-V3.2", SONNET]
 ORDERS = ["pairwise_blind", "pairwise_blind_reverse"]
@@ -300,7 +300,7 @@ def main() -> None:
         "status": "pass" if len(valid) == 1200 else "partial",
         "policy": "sonnet_full200_vs_3model_gemini_no_release_no_leaderboard",
         "todo": "#11 4th-model FULL (Sonnet-4.6), 200 ctx x 3 opp x 2 order = 1200",
-        "judge": "Gemini-3.1-Pro-Preview-Third (non-participant)",
+        "judge": "Gemini-3.1-Pro-Preview (non-participant)",
         "sonnet_model": SONNET,
         "contexts": 200,
         "unique_ordered_judgments": len(sonnet),
@@ -339,7 +339,7 @@ def main() -> None:
     lines = [
         "# Lit2Test v0.2 — 4th Model (Claude-Sonnet-4.6) FULL 200, Gemini Judge (1200)",
         "",
-        "中文简介:第 4 模型 Claude-Sonnet-4.6-hq 全 200 情境。只建 Sonnet 参与的新对"
+        "中文简介:第 4 模型 Claude-Sonnet-4.6 全 200 情境。只建 Sonnet 参与的新对"
         "(200 ctx × 3 对手 × 正反序 = 1200),Gemini 非参赛裁判判,判官 prompt 与原生管线完全一致。"
         "现有 3 模型 1200 判**不重判**,仅在联合 BT 里给 Sonnet 定位(联合 2400 边)。",
         "",

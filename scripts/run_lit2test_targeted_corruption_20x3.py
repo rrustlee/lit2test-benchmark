@@ -29,7 +29,7 @@ from run_lit2test_dimension_decomposed_gemini_audit import (
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUTPUT_DIR = ROOT / "outputs/lit2test_targeted_corruption_20x3"
 ENDPOINT = os.environ.get("JUDGE_BASE_URL", "${API_BASE_URL}") + "/responses"
-MODEL = "Gemini-3.1-Pro-Preview-Third"
+MODEL = "Gemini-3.1-Pro-Preview"
 
 
 def read_json(path: Path) -> dict[str, Any]:

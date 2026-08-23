@@ -8,16 +8,16 @@ Diagnostic only — no release, no leaderboard.
 ## Purpose
 
 Reviewer weakness W2: the corrected main analysis relies on a single canonical
-judge (Gemini-3.1-Pro-Preview-Third). This experiment re-judges the full
+judge (Gemini-3.1-Pro-Preview). This experiment re-judges the full
 canonical pairwise set with an independent second judge and measures agreement
 with the corrected Gemini verdicts.
 
 ## Second judge
 
-- Model: `Doubao-Seed-2.0-pro` (endpoint-resolved id: `doubao-seed-2-0-pro-260215`),
+- Model: `Doubao-Seed-2.0-pro`,
   ByteDance Seed family.
 - Why: hard constraint excluded the four participants (GPT 5.2,
-  Claude-Sonnet-4.6-hq, GLM-5, DeepSeek-V3.2) and the canonical judge family
+  Claude-Sonnet-4.6, GLM-5, DeepSeek-V3.2) and the canonical judge family
   (Gemini). Endpoint probe on 2026-07-28: `Qwen3-Max`, `Kimi-K2`,
   `Mistral-Large` were not accessible through the evaluation endpoint;
   `Doubao-Seed-2.0-pro` is the only accessible model from a family disjoint
@@ -76,7 +76,7 @@ Full 1,200 pairs (2,400 ordered judgments):
   759/950 = **0.799**; when both judges decisive 759/980 = **0.774**
 - second-judge stability: 992 stable / 208 unstable (0.827; Gemini corrected:
   950/250 = 0.792)
-- BT ranking (ordered edges): **GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 >
+- BT ranking (ordered edges): **GPT 5.2 > Claude-Sonnet-4.6 > GLM-5 >
   DeepSeek-V3.2** — identical to the corrected Gemini BT ranking; the folded
   (flip→tie, tie=0.5) BT ranking is also identical.
 - Condorcet: transitive, winner GPT 5.2, beat_counts 3/2/1/0 — same total

@@ -11,7 +11,7 @@
         1.131152,
         1.429789
       ],
-      "Claude-Sonnet-4.6-hq": [
+      "Claude-Sonnet-4.6": [
         0.599305,
         0.901623
       ],
@@ -29,7 +29,7 @@
         1.135133,
         1.403131
       ],
-      "Claude-Sonnet-4.6-hq": [
+      "Claude-Sonnet-4.6": [
         0.622307,
         0.87032
       ],
@@ -50,7 +50,7 @@
       "rank3": 0,
       "rank4": 0
     },
-    "Claude-Sonnet-4.6-hq": {
+    "Claude-Sonnet-4.6": {
       "rank1": 0,
       "rank2": 10000,
       "rank3": 0,
@@ -70,9 +70,9 @@
     }
   },
   "ranking_distribution_top5": {
-    "GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 > DeepSeek-V3.2": 10000
+    "GPT 5.2 > Claude-Sonnet-4.6 > GLM-5 > DeepSeek-V3.2": 10000
   },
-  "modal_full_ranking": "GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 > DeepSeek-V3.2",
+  "modal_full_ranking": "GPT 5.2 > Claude-Sonnet-4.6 > GLM-5 > DeepSeek-V3.2",
   "modal_ranking_fraction": {
     "cluster_bootstrap": 1.0,
     "pair_bootstrap_reference": 1.0
@@ -83,7 +83,7 @@
       "cluster_ci_width": 0.298637,
       "cluster_wider_pct": 11.4
     },
-    "Claude-Sonnet-4.6-hq": {
+    "Claude-Sonnet-4.6": {
       "pair_ci_width": 0.248013,
       "cluster_ci_width": 0.302317,
       "cluster_wider_pct": 21.9

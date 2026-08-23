@@ -342,7 +342,7 @@ Stable 且 r1/r2 形成 A/B 共识的 cases：
 
 r1+r2 consensus BT 点排序：
 
-> `GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 > DeepSeek-V3.2`
+> `GPT 5.2 > Claude-Sonnet-4.6 > GLM-5 > DeepSeek-V3.2`
 
 原三人 majority 的 stable agreement 为 `34/39 = 87.2%`，BT 点排序相同。因此主要 alignment 和 ranking 结论不依赖 r3 的 A-side preference。
 
@@ -529,7 +529,7 @@ Falsifiability 的结果边界：
 
 Human BT 点估计：
 
-> `GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 > DeepSeek-V3.2`
+> `GPT 5.2 > Claude-Sonnet-4.6 > GLM-5 > DeepSeek-V3.2`
 
 与 Gemini full ranking 的点估计相关性：
 

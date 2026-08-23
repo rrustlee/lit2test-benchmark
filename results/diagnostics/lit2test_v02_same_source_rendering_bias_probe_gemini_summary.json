@@ -1,7 +1,7 @@
 {
   "status": "pass",
   "probe": "same_source_rendering_bias_probe",
-  "judge": "Gemini-3.1-Pro-Preview-Third (non-participant)",
+  "judge": "Gemini-3.1-Pro-Preview (non-participant)",
   "policy": "construct_validity_probe_no_release_no_leaderboard",
   "todo": "#8 (feeds #6 construct-validity, re-verifies #3 with Gemini)",
   "same_source": {

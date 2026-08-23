@@ -2,7 +2,7 @@
   "status": "pass",
   "protocol": {
     "protocol_version": "lit2test_dimension_decomposed_gemini_audit_v1_20260721",
-    "model": "Gemini-3.1-Pro-Preview-Third",
+    "model": "Gemini-3.1-Pro-Preview",
     "endpoint": "${API_BASE_URL}/responses",
     "prompt_sha256": "f7420b4019b440f2abdea3e78d0a96713d14938eb9fa0da669684956b28753f6",
     "audit_tasks_sha256": "6ec98a5675b4b6966c7df3d2a4ec607dc40c28cacbb7a95727277408f91cc94a",
@@ -20,9 +20,9 @@
     "real_cases": 90,
     "control_cases": 4,
     "model_pair_counts": {
-      "Claude-Sonnet-4.6-hq vs DeepSeek-V3.2": 15,
-      "Claude-Sonnet-4.6-hq vs GLM-5": 15,
-      "Claude-Sonnet-4.6-hq vs GPT 5.2": 15,
+      "Claude-Sonnet-4.6 vs DeepSeek-V3.2": 15,
+      "Claude-Sonnet-4.6 vs GLM-5": 15,
+      "Claude-Sonnet-4.6 vs GPT 5.2": 15,
       "DeepSeek-V3.2 vs GLM-5": 15,
       "DeepSeek-V3.2 vs GPT 5.2": 15,
       "GLM-5 vs GPT 5.2": 15
@@ -466,7 +466,7 @@
       }
     },
     "by_model_pair": {
-      "Claude-Sonnet-4.6-hq vs DeepSeek-V3.2": {
+      "Claude-Sonnet-4.6 vs DeepSeek-V3.2": {
         "structured_overall": {
           "exact": {
             "numerator": 25,
@@ -597,7 +597,7 @@
           "cohen_kappa": 0.5227272727272728
         }
       },
-      "Claude-Sonnet-4.6-hq vs GLM-5": {
+      "Claude-Sonnet-4.6 vs GLM-5": {
         "structured_overall": {
           "exact": {
             "numerator": 25,
@@ -728,7 +728,7 @@
           "cohen_kappa": 0.590909090909091
         }
       },
-      "Claude-Sonnet-4.6-hq vs GPT 5.2": {
+      "Claude-Sonnet-4.6 vs GPT 5.2": {
         "structured_overall": {
           "exact": {
             "numerator": 24,

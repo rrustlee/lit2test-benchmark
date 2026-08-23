@@ -14,7 +14,7 @@ HUMAN_MD = (Path(__file__).resolve().parent.parent.parent / "results" / "human_s
 
 DIMS = ["grounding", "decisive_metric", "falsifiability"]
 DIM_SHORT = ["Ground.", "Dec.\nmetric", "Falsif."]
-MODELS = ["GPT 5.2", "Claude-Sonnet-4.6-hq", "GLM-5", "DeepSeek-V3.2"]
+MODELS = ["GPT 5.2", "Claude-Sonnet-4.6", "GLM-5", "DeepSeek-V3.2"]
 TEAL, ORANGE, GRAY, INK = "#0173B2", "#DE8F05", "#8A8A8A", "#333333"
 DIM_COLORS = ["#0173B2", "#029E73", "#D55E00"]
 MODEL_COLORS = ["#0173B2", "#029E73", "#D55E00", "#DE8F05"]
@@ -78,7 +78,7 @@ ax.set_title("(b) Subtle: net of sham", pad=3)
 ax = axes[2]
 judge_bt = MAIN["corrected"]["folded"]["bt_centered_log_ability"]
 
-name_map = {"GPT 5.2": "GPT 5.2", "Sonnet": "Claude-Sonnet-4.6-hq", "GLM-5": "GLM-5", "DeepSeek": "DeepSeek-V3.2"}
+name_map = {"GPT 5.2": "GPT 5.2", "Sonnet": "Claude-Sonnet-4.6", "GLM-5": "GLM-5", "DeepSeek": "DeepSeek-V3.2"}
 h2h_table = re.findall(r"\|\s*(GPT 5\.2|Sonnet|GLM-5|DeepSeek)\s+vs\s+(.*?)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|", HUMAN_MD)
 wins = {m: 0.0 for m in MODELS}
 total = {m: 0.0 for m in MODELS}

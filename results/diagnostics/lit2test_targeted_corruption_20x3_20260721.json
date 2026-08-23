@@ -2,7 +2,7 @@
   "status": "complete",
   "protocol_id": "targeted_corruption_20x3_v1",
   "policy": "targeted_corruption_local_sensitivity_no_generation_claim_no_human_gold_no_leaderboard",
-  "judge_model": "Gemini-3.1-Pro-Preview-Third",
+  "judge_model": "Gemini-3.1-Pro-Preview",
   "completion_gate": {
     "tasks": 120,
     "valid": 120,

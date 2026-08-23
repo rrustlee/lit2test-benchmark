@@ -95,7 +95,7 @@ Every number in the paper can be re-derived from the frozen artifacts under `res
 ## Notes
 
 - Each line of `results/main/corrected_folded_pairs.jsonl` carries BOTH ordered verdicts of its pair (`gemini_original_winner`, `gemini_reverse_winner`), so the 2,400-judgment ordered level, the folding rule, the ordered Bradley-Terry fit, and its case bootstrap can all be re-derived offline from this single file.
-- Internal model identifier `Claude-Sonnet-4.6-hq` in result artifacts corresponds to "Claude Sonnet 4.6" in the paper (the `-hq` suffix denotes the serving configuration, not a different model). Likewise `Gemini-3.1-Pro-Preview-Third` = "Gemini 3.1 Pro (Preview)" (routing-channel suffix).
+- Model identifiers in result artifacts (`Claude-Sonnet-4.6`, `Gemini-3.1-Pro-Preview`, etc.) correspond directly to the model names used in the paper.
 - Table 1 prints DeepSeek-V3.2 BT as $-1.28$ (ordered-judgment fit); the stable-case fit in `results/main` gives $-1.27$. As stated in the Table 1 caption, the two fits agree within 0.01; all rankings and CIs are unaffected.
 - The orientation defect in 65 reverse tasks of batch 1 and its correction are documented in `results/main/correction_summary.md`.
 - Path placeholders `${PROJECT_ROOT}`, `${API_BASE_URL}`, `${API_HOST}` in scripts and archived logs replace environment-specific values.

@@ -128,7 +128,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Native-prompt Gemini pairwise judge for lit2test v0.2 blind tasks")
     parser.add_argument("--tasks", required=True)
     parser.add_argument("--output-dir", required=True)
-    parser.add_argument("--judge-model", default="Gemini-3.1-Pro-Preview-Third")
+    parser.add_argument("--judge-model", default="Gemini-3.1-Pro-Preview")
     parser.add_argument("--base-url", default=os.environ.get("GEMINI_BASE_URL", "${API_BASE_URL}"))
     parser.add_argument("--api-key", default=os.environ.get("API_KEY"))
     parser.add_argument("--timeout", type=float, default=120.0)

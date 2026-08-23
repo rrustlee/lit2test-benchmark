@@ -90,7 +90,7 @@ def main() -> None:
     parser.add_argument("--contexts", default="data/lit2test_v02_expansion40_adjudicated40_contexts.jsonl")
     parser.add_argument("--template", default="prompts/lit2test_generation_prompt.md")
     parser.add_argument("--output-dir", default="outputs/lit2test_v02_expansion40_full/generations_sonnet46")
-    parser.add_argument("--model", default="Claude-Sonnet-4.6-hq")
+    parser.add_argument("--model", default="Claude-Sonnet-4.6")
     parser.add_argument("--base-url", default=os.environ.get("ANTHROPIC_BASE_URL", "${API_BASE_URL_ANTHROPIC}"))
     parser.add_argument("--api-key", default=os.environ.get("ANTHROPIC_AUTH_TOKEN") or os.environ.get("ANTHROPIC_API_KEY"))
     parser.add_argument("--temperature", type=float, default=1.0)

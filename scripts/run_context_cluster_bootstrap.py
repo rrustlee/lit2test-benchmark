@@ -6,7 +6,7 @@ from pathlib import Path
 
 SEED = 20260729
 N_REPLICATES = 10000
-MODELS = ["GPT 5.2", "Claude-Sonnet-4.6-hq", "GLM-5", "DeepSeek-V3.2"]
+MODELS = ["GPT 5.2", "Claude-Sonnet-4.6", "GLM-5", "DeepSeek-V3.2"]
 
 DATA_PATH = Path(__file__).resolve().parent.parent / "results/main/corrected_folded_pairs.jsonl"
 PAIR_RESULTS_PATH = Path(__file__).resolve().parent.parent / "results/main/lit2test_corrected_gemini_main_results.json"

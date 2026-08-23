@@ -1,0 +1,202 @@
+{
+  "status": "complete",
+  "protocol_id": "targeted_corruption_20x3_v1",
+  "policy": "targeted_corruption_local_sensitivity_no_generation_claim_no_human_gold_no_leaderboard",
+  "judge_model": "Gemini-3.1-Pro-Preview-Third",
+  "completion_gate": {
+    "tasks": 120,
+    "valid": 120,
+    "canonical_cases": 20,
+    "canonical_pairs": 60
+  },
+  "aggregation": {
+    "unit": "canonical_case",
+    "bootstrap_replicates": 10000,
+    "confidence_weighting": false,
+    "ordered_rows_as_independent_samples": false
+  },
+  "dimensions": {
+    "grounding": {
+      "cases": 20,
+      "ordered_judgments": 40,
+      "clean_overall_win_rate": {
+        "clean_wins": 40,
+        "denominator": 40,
+        "rate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "bootstrap_unit": "canonical_case"
+      },
+      "both_order_clean_win_count": 20,
+      "both_order_corrupt_win_count": 0,
+      "ordered_corrupt_wins": 0,
+      "ordered_ties": 0,
+      "target_score_drop": {
+        "n_cases": 20,
+        "mean": 1.725,
+        "mean_ci95": [
+          1.6,
+          1.85
+        ],
+        "median": 1.75,
+        "median_ci95": [
+          1.5,
+          2.0
+        ],
+        "bootstrap_unit": "canonical_case",
+        "bootstrap_replicates": 10000
+      },
+      "non_target_absolute_score_drift": {
+        "n_cases": 20,
+        "mean": 0.0,
+        "mean_ci95": [
+          0.0,
+          0.0
+        ],
+        "median": 0.0,
+        "median_ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_unit": "canonical_case",
+        "bootstrap_replicates": 10000
+      },
+      "order_consistency": {
+        "consistent_cases": 20,
+        "cases": 20,
+        "rate": 1.0,
+        "direct_flip_count": 0,
+        "tie_involved_mismatch_count": 0
+      }
+    },
+    "decisive_metric": {
+      "cases": 20,
+      "ordered_judgments": 40,
+      "clean_overall_win_rate": {
+        "clean_wins": 40,
+        "denominator": 40,
+        "rate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "bootstrap_unit": "canonical_case"
+      },
+      "both_order_clean_win_count": 20,
+      "both_order_corrupt_win_count": 0,
+      "ordered_corrupt_wins": 0,
+      "ordered_ties": 0,
+      "target_score_drop": {
+        "n_cases": 20,
+        "mean": 2.0,
+        "mean_ci95": [
+          2.0,
+          2.0
+        ],
+        "median": 2.0,
+        "median_ci95": [
+          2.0,
+          2.0
+        ],
+        "bootstrap_unit": "canonical_case",
+        "bootstrap_replicates": 10000
+      },
+      "non_target_absolute_score_drift": {
+        "n_cases": 20,
+        "mean": 0.00625,
+        "mean_ci95": [
+          0.0,
+          0.01875
+        ],
+        "median": 0.0,
+        "median_ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_unit": "canonical_case",
+        "bootstrap_replicates": 10000
+      },
+      "order_consistency": {
+        "consistent_cases": 20,
+        "cases": 20,
+        "rate": 1.0,
+        "direct_flip_count": 0,
+        "tie_involved_mismatch_count": 0
+      }
+    },
+    "falsifiability": {
+      "cases": 20,
+      "ordered_judgments": 40,
+      "clean_overall_win_rate": {
+        "clean_wins": 40,
+        "denominator": 40,
+        "rate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "bootstrap_unit": "canonical_case"
+      },
+      "both_order_clean_win_count": 20,
+      "both_order_corrupt_win_count": 0,
+      "ordered_corrupt_wins": 0,
+      "ordered_ties": 0,
+      "target_score_drop": {
+        "n_cases": 20,
+        "mean": 1.95,
+        "mean_ci95": [
+          1.85,
+          2.0
+        ],
+        "median": 2.0,
+        "median_ci95": [
+          2.0,
+          2.0
+        ],
+        "bootstrap_unit": "canonical_case",
+        "bootstrap_replicates": 10000
+      },
+      "non_target_absolute_score_drift": {
+        "n_cases": 20,
+        "mean": 0.0,
+        "mean_ci95": [
+          0.0,
+          0.0
+        ],
+        "median": 0.0,
+        "median_ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_unit": "canonical_case",
+        "bootstrap_replicates": 10000
+      },
+      "order_consistency": {
+        "consistent_cases": 20,
+        "cases": 20,
+        "rate": 1.0,
+        "direct_flip_count": 0,
+        "tie_involved_mismatch_count": 0
+      }
+    }
+  },
+  "claim_boundary": {
+    "supports": "localized counterfactual judge sensitivity",
+    "does_not_support": [
+      "schema improves generated ideas",
+      "falsifier requirement improves research outcomes",
+      "Gemini is an objective gold label",
+      "falsifiability is the most discriminative empirical dimension",
+      "causal effect of the schema on model capability"
+    ]
+  },
+  "release_ready": false,
+  "allowed_to_publish_leaderboard": false,
+  "artifacts": {
+    "protocol_sha256": "34a5f1dd8f62c57fbf4797deb2199ef735f0e7ada6ef1de7c62359c91bb7d67e",
+    "tasks_sha256": "44179559f8828f92af2884c6c523764b4968eb91d5df02b4f28aa3d4cda0347f",
+    "judgments_sha256": "c8f4a469dc0c2b429709efe4cd7ee7cbc3103ce81d7f93ff4773e7e4619214b2"
+  }
+}

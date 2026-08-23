@@ -1,0 +1,102 @@
+{
+  "method": "Context-cluster bootstrap: resample 200 context_ids with replacement, include all 6 pairs per context. Bradley-Terry MM with ties=0.5/0.5. Centered log-abilities.",
+  "seed": 20260729,
+  "n_replicates": 10000,
+  "n_contexts": 200,
+  "n_pairs": 1200,
+  "pairs_per_context": 6,
+  "ci95_centered_log_ability": {
+    "cluster_bootstrap": {
+      "GPT 5.2": [
+        1.131152,
+        1.429789
+      ],
+      "Claude-Sonnet-4.6-hq": [
+        0.599305,
+        0.901623
+      ],
+      "GLM-5": [
+        -0.893433,
+        -0.582485
+      ],
+      "DeepSeek-V3.2": [
+        -1.455681,
+        -1.123052
+      ]
+    },
+    "pair_bootstrap_reference": {
+      "GPT 5.2": [
+        1.135133,
+        1.403131
+      ],
+      "Claude-Sonnet-4.6-hq": [
+        0.622307,
+        0.87032
+      ],
+      "GLM-5": [
+        -0.856724,
+        -0.611949
+      ],
+      "DeepSeek-V3.2": [
+        -1.422736,
+        -1.146037
+      ]
+    }
+  },
+  "rank_distribution": {
+    "GPT 5.2": {
+      "rank1": 10000,
+      "rank2": 0,
+      "rank3": 0,
+      "rank4": 0
+    },
+    "Claude-Sonnet-4.6-hq": {
+      "rank1": 0,
+      "rank2": 10000,
+      "rank3": 0,
+      "rank4": 0
+    },
+    "GLM-5": {
+      "rank1": 0,
+      "rank2": 0,
+      "rank3": 10000,
+      "rank4": 0
+    },
+    "DeepSeek-V3.2": {
+      "rank1": 0,
+      "rank2": 0,
+      "rank3": 0,
+      "rank4": 10000
+    }
+  },
+  "ranking_distribution_top5": {
+    "GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 > DeepSeek-V3.2": 10000
+  },
+  "modal_full_ranking": "GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 > DeepSeek-V3.2",
+  "modal_ranking_fraction": {
+    "cluster_bootstrap": 1.0,
+    "pair_bootstrap_reference": 1.0
+  },
+  "pair_vs_cluster_ci_width_ratio": {
+    "GPT 5.2": {
+      "pair_ci_width": 0.267997,
+      "cluster_ci_width": 0.298637,
+      "cluster_wider_pct": 11.4
+    },
+    "Claude-Sonnet-4.6-hq": {
+      "pair_ci_width": 0.248013,
+      "cluster_ci_width": 0.302317,
+      "cluster_wider_pct": 21.9
+    },
+    "GLM-5": {
+      "pair_ci_width": 0.244775,
+      "cluster_ci_width": 0.310948,
+      "cluster_wider_pct": 27.0
+    },
+    "DeepSeek-V3.2": {
+      "pair_ci_width": 0.276699,
+      "cluster_ci_width": 0.33263,
+      "cluster_wider_pct": 20.2
+    }
+  }
+}

@@ -1,0 +1,325 @@
+{
+  "status": "pass",
+  "policy": "tie-sensitivity reanalysis of corrected combined200 folded cases; local only; no API; no git; frozen inputs untouched",
+  "date": "2026-07-28",
+  "reviewer_weakness": "W3: excluding the 21% order-sensitive cases before reporting a strict ordering risks circular amplification",
+  "inputs": {
+    "case_level_folded": "outputs/lit2test_v02_expansion40_adjudicated40/pairwise_blind_reverse_correction65/corrected_folded_pairs.jsonl",
+    "cross_check_report": "analysis/lit2test_corrected_gemini_main_results.json"
+  },
+  "coverage": {
+    "folded_cases": 1200,
+    "order_stable": 950,
+    "order_unstable": 250,
+    "cases_per_model_pair": {
+      "DeepSeek-V3.2 | Claude-Sonnet-4.6-hq": 200,
+      "GLM-5 | Claude-Sonnet-4.6-hq": 200,
+      "GLM-5 | DeepSeek-V3.2": 200,
+      "GPT 5.2 | Claude-Sonnet-4.6-hq": 200,
+      "GPT 5.2 | DeepSeek-V3.2": 200,
+      "GPT 5.2 | GLM-5": 200
+    },
+    "cross_check_vs_corrected_report": "exact match on all six model-pair stable-win and sensitive counts"
+  },
+  "reference_ranking": "GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 > DeepSeek-V3.2",
+  "reference_folded_bt_ranking_from_frozen_report": "GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 > DeepSeek-V3.2",
+  "per_pair_folded_data": {
+    "DeepSeek-V3.2 | Claude-Sonnet-4.6-hq": {
+      "stable_wins": {
+        "DeepSeek-V3.2": 11,
+        "Claude-Sonnet-4.6-hq": 166
+      },
+      "order_sensitive": 23,
+      "cases": 200
+    },
+    "GLM-5 | Claude-Sonnet-4.6-hq": {
+      "stable_wins": {
+        "GLM-5": 18,
+        "Claude-Sonnet-4.6-hq": 143
+      },
+      "order_sensitive": 39,
+      "cases": 200
+    },
+    "GLM-5 | DeepSeek-V3.2": {
+      "stable_wins": {
+        "GLM-5": 93,
+        "DeepSeek-V3.2": 46
+      },
+      "order_sensitive": 61,
+      "cases": 200
+    },
+    "GPT 5.2 | Claude-Sonnet-4.6-hq": {
+      "stable_wins": {
+        "GPT 5.2": 90,
+        "Claude-Sonnet-4.6-hq": 38
+      },
+      "order_sensitive": 72,
+      "cases": 200
+    },
+    "GPT 5.2 | DeepSeek-V3.2": {
+      "stable_wins": {
+        "GPT 5.2": 180,
+        "DeepSeek-V3.2": 4
+      },
+      "order_sensitive": 16,
+      "cases": 200
+    },
+    "GPT 5.2 | GLM-5": {
+      "stable_wins": {
+        "GPT 5.2": 154,
+        "GLM-5": 7
+      },
+      "order_sensitive": 39,
+      "cases": 200
+    }
+  },
+  "scheme_a_conservative_ties": {
+    "definition": "all 250 order-sensitive cases scored as ties (0.5 win to each side); merged with 950 stable results",
+    "head_to_head": {
+      "DeepSeek-V3.2 | Claude-Sonnet-4.6-hq": {
+        "scores": {
+          "DeepSeek-V3.2": 22.5,
+          "Claude-Sonnet-4.6-hq": 177.5
+        },
+        "majority": "Claude-Sonnet-4.6-hq",
+        "margin": -155.0
+      },
+      "GLM-5 | Claude-Sonnet-4.6-hq": {
+        "scores": {
+          "GLM-5": 37.5,
+          "Claude-Sonnet-4.6-hq": 162.5
+        },
+        "majority": "Claude-Sonnet-4.6-hq",
+        "margin": -125.0
+      },
+      "GLM-5 | DeepSeek-V3.2": {
+        "scores": {
+          "GLM-5": 123.5,
+          "DeepSeek-V3.2": 76.5
+        },
+        "majority": "GLM-5",
+        "margin": 47.0
+      },
+      "GPT 5.2 | Claude-Sonnet-4.6-hq": {
+        "scores": {
+          "GPT 5.2": 126.0,
+          "Claude-Sonnet-4.6-hq": 74.0
+        },
+        "majority": "GPT 5.2",
+        "margin": 52.0
+      },
+      "GPT 5.2 | DeepSeek-V3.2": {
+        "scores": {
+          "GPT 5.2": 188.0,
+          "DeepSeek-V3.2": 12.0
+        },
+        "majority": "GPT 5.2",
+        "margin": 176.0
+      },
+      "GPT 5.2 | GLM-5": {
+        "scores": {
+          "GPT 5.2": 173.5,
+          "GLM-5": 26.5
+        },
+        "majority": "GPT 5.2",
+        "margin": 147.0
+      }
+    },
+    "condorcet": {
+      "beat_counts": {
+        "GPT 5.2": 3,
+        "GLM-5": 1,
+        "DeepSeek-V3.2": 0,
+        "Claude-Sonnet-4.6-hq": 2
+      },
+      "transitive_no_cycle": true,
+      "condorcet_winner": "GPT 5.2",
+      "condorcet_ranking": "GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 > DeepSeek-V3.2"
+    },
+    "bt_centered_log_ability": {
+      "GPT 5.2": 1.2709267266563624,
+      "GLM-5": -0.7346749812593352,
+      "DeepSeek-V3.2": -1.2820704054965515,
+      "Claude-Sonnet-4.6-hq": 0.745818660099524
+    },
+    "bt_ranking": "GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 > DeepSeek-V3.2",
+    "reference_ranking_preserved_strictly": true
+  },
+  "scheme_b_adversarial": {
+    "definition": "every order-sensitive case awarded to the lower-ranked model of its pair under the reference ordering (worst case)",
+    "per_pair": {
+      "DeepSeek-V3.2 | Claude-Sonnet-4.6-hq": {
+        "higher_ranked": "Claude-Sonnet-4.6-hq",
+        "lower_ranked": "DeepSeek-V3.2",
+        "stable_wins_higher": 166,
+        "stable_wins_lower": 11,
+        "sensitive_awarded_to_lower": 23,
+        "adversarial_score_higher": 166,
+        "adversarial_score_lower": 34,
+        "adversarial_margin_higher_minus_lower": 132,
+        "flips_under_adversarial": false,
+        "exact_tie_under_adversarial": false
+      },
+      "GLM-5 | Claude-Sonnet-4.6-hq": {
+        "higher_ranked": "Claude-Sonnet-4.6-hq",
+        "lower_ranked": "GLM-5",
+        "stable_wins_higher": 143,
+        "stable_wins_lower": 18,
+        "sensitive_awarded_to_lower": 39,
+        "adversarial_score_higher": 143,
+        "adversarial_score_lower": 57,
+        "adversarial_margin_higher_minus_lower": 86,
+        "flips_under_adversarial": false,
+        "exact_tie_under_adversarial": false
+      },
+      "GLM-5 | DeepSeek-V3.2": {
+        "higher_ranked": "GLM-5",
+        "lower_ranked": "DeepSeek-V3.2",
+        "stable_wins_higher": 93,
+        "stable_wins_lower": 46,
+        "sensitive_awarded_to_lower": 61,
+        "adversarial_score_higher": 93,
+        "adversarial_score_lower": 107,
+        "adversarial_margin_higher_minus_lower": -14,
+        "flips_under_adversarial": true,
+        "exact_tie_under_adversarial": false
+      },
+      "GPT 5.2 | Claude-Sonnet-4.6-hq": {
+        "higher_ranked": "GPT 5.2",
+        "lower_ranked": "Claude-Sonnet-4.6-hq",
+        "stable_wins_higher": 90,
+        "stable_wins_lower": 38,
+        "sensitive_awarded_to_lower": 72,
+        "adversarial_score_higher": 90,
+        "adversarial_score_lower": 110,
+        "adversarial_margin_higher_minus_lower": -20,
+        "flips_under_adversarial": true,
+        "exact_tie_under_adversarial": false
+      },
+      "GPT 5.2 | DeepSeek-V3.2": {
+        "higher_ranked": "GPT 5.2",
+        "lower_ranked": "DeepSeek-V3.2",
+        "stable_wins_higher": 180,
+        "stable_wins_lower": 4,
+        "sensitive_awarded_to_lower": 16,
+        "adversarial_score_higher": 180,
+        "adversarial_score_lower": 20,
+        "adversarial_margin_higher_minus_lower": 160,
+        "flips_under_adversarial": false,
+        "exact_tie_under_adversarial": false
+      },
+      "GPT 5.2 | GLM-5": {
+        "higher_ranked": "GPT 5.2",
+        "lower_ranked": "GLM-5",
+        "stable_wins_higher": 154,
+        "stable_wins_lower": 7,
+        "sensitive_awarded_to_lower": 39,
+        "adversarial_score_higher": 154,
+        "adversarial_score_lower": 46,
+        "adversarial_margin_higher_minus_lower": 108,
+        "flips_under_adversarial": false,
+        "exact_tie_under_adversarial": false
+      }
+    },
+    "head_to_head": {
+      "DeepSeek-V3.2 | Claude-Sonnet-4.6-hq": {
+        "scores": {
+          "DeepSeek-V3.2": 34,
+          "Claude-Sonnet-4.6-hq": 166
+        },
+        "majority": "Claude-Sonnet-4.6-hq",
+        "margin": -132
+      },
+      "GLM-5 | Claude-Sonnet-4.6-hq": {
+        "scores": {
+          "GLM-5": 57,
+          "Claude-Sonnet-4.6-hq": 143
+        },
+        "majority": "Claude-Sonnet-4.6-hq",
+        "margin": -86
+      },
+      "GLM-5 | DeepSeek-V3.2": {
+        "scores": {
+          "GLM-5": 93,
+          "DeepSeek-V3.2": 107
+        },
+        "majority": "DeepSeek-V3.2",
+        "margin": -14
+      },
+      "GPT 5.2 | Claude-Sonnet-4.6-hq": {
+        "scores": {
+          "GPT 5.2": 90,
+          "Claude-Sonnet-4.6-hq": 110
+        },
+        "majority": "Claude-Sonnet-4.6-hq",
+        "margin": -20
+      },
+      "GPT 5.2 | DeepSeek-V3.2": {
+        "scores": {
+          "GPT 5.2": 180,
+          "DeepSeek-V3.2": 20
+        },
+        "majority": "GPT 5.2",
+        "margin": 160
+      },
+      "GPT 5.2 | GLM-5": {
+        "scores": {
+          "GPT 5.2": 154,
+          "GLM-5": 46
+        },
+        "majority": "GPT 5.2",
+        "margin": 108
+      }
+    },
+    "condorcet": {
+      "beat_counts": {
+        "GPT 5.2": 2,
+        "GLM-5": 0,
+        "DeepSeek-V3.2": 1,
+        "Claude-Sonnet-4.6-hq": 3
+      },
+      "transitive_no_cycle": true,
+      "condorcet_winner": "Claude-Sonnet-4.6-hq",
+      "condorcet_ranking": "Claude-Sonnet-4.6-hq > GPT 5.2 > DeepSeek-V3.2 > GLM-5"
+    },
+    "bt_centered_log_ability": {
+      "GPT 5.2": 0.7220848846722825,
+      "GLM-5": -0.5991048874322615,
+      "DeepSeek-V3.2": -0.8143842194344781,
+      "Claude-Sonnet-4.6-hq": 0.6914042221944565
+    },
+    "bt_ranking": "GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 > DeepSeek-V3.2",
+    "reference_ranking_preserved": false,
+    "flipped_pairs": [
+      "GLM-5 | DeepSeek-V3.2",
+      "GPT 5.2 | Claude-Sonnet-4.6-hq"
+    ],
+    "surviving_pairs_sorted_by_margin": [
+      [
+        "GLM-5 | Claude-Sonnet-4.6-hq",
+        86
+      ],
+      [
+        "GPT 5.2 | GLM-5",
+        108
+      ],
+      [
+        "DeepSeek-V3.2 | Claude-Sonnet-4.6-hq",
+        132
+      ],
+      [
+        "GPT 5.2 | DeepSeek-V3.2",
+        160
+      ]
+    ]
+  },
+  "bootstrap_scheme_a": {
+    "replicates": 10000,
+    "seed": 20260721,
+    "unit": "folded case (n=1200), resampled with replacement; sensitive cases carried as 0.5/0.5 ties",
+    "rank_distribution": {
+      "GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 > DeepSeek-V3.2": 10000
+    },
+    "full_reference_ordering_recovery_rate": 1.0
+  }
+}

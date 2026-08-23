@@ -1,0 +1,56 @@
+{
+  "status": "pass",
+  "probe": "same_source_rendering_bias_probe",
+  "judge": "Gemini-3.1-Pro-Preview-Third (non-participant)",
+  "policy": "construct_validity_probe_no_release_no_leaderboard",
+  "todo": "#8 (feeds #6 construct-validity, re-verifies #3 with Gemini)",
+  "same_source": {
+    "judgment_rows": 80,
+    "valid_rows": 80,
+    "fatal": 0,
+    "row_shell_wins": {
+      "tie": 80
+    },
+    "row_shell_win_shares": {
+      "tie": 1.0
+    },
+    "confidence_dist": {
+      "high": 80
+    },
+    "pairs_with_votes": 40,
+    "order_stable_pairs": 40,
+    "order_stable_rate": 1.0
+  },
+  "positive_control": {
+    "desc": "real model content vs a well-formed but vacuous non-answer; a content-driven judge must pick the real one regardless of slot. Run in BOTH orders to rule out position bias.",
+    "forward": {
+      "layout": "answer_a=real, answer_b=vacuous -> expect winner A",
+      "rows": 6,
+      "valid": 6,
+      "real_answer_wins": 6,
+      "real_answer_win_rate": 1.0,
+      "confidence_dist": {
+        "high": 6
+      }
+    },
+    "reverse": {
+      "layout": "answer_a=vacuous, answer_b=real -> expect winner B",
+      "rows": 6,
+      "valid": 6,
+      "real_answer_wins": 6,
+      "real_answer_win_rate": 1.0,
+      "confidence_dist": {
+        "high": 6
+      }
+    },
+    "combined_position_independent": {
+      "valid": 12,
+      "real_answer_wins": 12,
+      "real_answer_win_rate": 1.0
+    }
+  },
+  "conclusion_en": "Gemini judge is content-driven, not format/label-dependent: identical content in schema vs prose shells always ties (0% rendering bias, 100% order-stable, high confidence), while real-vs-vacuous content is discriminated in BOTH orders (12/12, high confidence) so the discrimination tracks content, not slot position. This CONTRASTS with the GPT-judge schema/label dependence noted in #3 and removes that confound from the main line.",
+  "interpretation_zh": "同源渲染探针(#8)结论:Gemini 裁判内容驱动,不受 schema/散文外壳影响。相同内容换壳 80/80 全平(格式偏置约 0,顺序稳定 100%,高置信);阳性对照(真实答案 vs 规整但空洞答案)正反序各 6/6、合计 12/12 全部选中真实答案(高置信),既排除“裁判永远判平”的退化解释,又排除位置偏好——判别跟的是内容不是位置。与 GPT 裁判的格式/标签依赖(#3)相反,换 Gemini 消除了该混杂,增强主线 construct validity(#6)。仍需人类校准(#5)兜底,本探针不替代人评、不发布 leaderboard。",
+  "release_ready": false,
+  "allowed_to_publish_leaderboard": false
+}

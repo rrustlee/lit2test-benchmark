@@ -1,0 +1,718 @@
+{
+  "status": "pass",
+  "policy": "independent corrected Gemini main analysis; no human-cali inputs; no API; no legacy artifact mutation",
+  "judge_model": "Gemini-3.1-Pro-Preview-Third",
+  "systems": [
+    "GPT 5.2",
+    "GLM-5",
+    "DeepSeek-V3.2",
+    "Claude-Sonnet-4.6-hq"
+  ],
+  "coverage": {
+    "manifest": "outputs/lit2test_human_acceptance_internal/package_manifest.json",
+    "ordered_judgments": 2400,
+    "folded_cases": 1200,
+    "manifest_duplicate_raw_judgments_deduped": 95,
+    "old_orientation_census": {
+      "correctly_swapped": 1135,
+      "same_order": 65
+    },
+    "corrected_orientation_census": {
+      "correctly_swapped": 1200
+    }
+  },
+  "correction": {
+    "pairs": 65,
+    "directory": "outputs/lit2test_v02_expansion40_adjudicated40/pairwise_blind_reverse_correction65",
+    "protocol_status": "frozen_ready_for_api_run",
+    "stability_transitions": {
+      "order-stable -> order-stable": 48,
+      "order-stable -> order-unstable": 11,
+      "order-unstable -> order-unstable": 4,
+      "order-unstable -> order-stable": 2
+    },
+    "changed_label_count": 13,
+    "changed_pairs": [
+      {
+        "pair_id": "smallari_expansion40_002_unlearning_machine_language_use_algorithms__v02_expansion40__DeepSeek-V3.2__vs__GPT_5.2",
+        "old_original_winner": "GPT 5.2",
+        "old_reverse_winner": "GPT 5.2",
+        "corrected_reverse_winner": "DeepSeek-V3.2",
+        "old_stability_label": "order-stable",
+        "corrected_stability_label": "order-unstable"
+      },
+      {
+        "pair_id": "smallari_expansion40_011_test_time_adaptation_active_tta_test__v02_expansion40__DeepSeek-V3.2__vs__GLM-5",
+        "old_original_winner": "DeepSeek-V3.2",
+        "old_reverse_winner": "GLM-5",
+        "corrected_reverse_winner": "DeepSeek-V3.2",
+        "old_stability_label": "order-unstable",
+        "corrected_stability_label": "order-stable"
+      },
+      {
+        "pair_id": "smallari_expansion40_011_test_time_adaptation_active_tta_test__v02_expansion40__DeepSeek-V3.2__vs__GPT_5.2",
+        "old_original_winner": "GPT 5.2",
+        "old_reverse_winner": "GPT 5.2",
+        "corrected_reverse_winner": "DeepSeek-V3.2",
+        "old_stability_label": "order-stable",
+        "corrected_stability_label": "order-unstable"
+      },
+      {
+        "pair_id": "smallari_expansion40_011_test_time_adaptation_active_tta_test__v02_expansion40__GLM-5__vs__GPT_5.2",
+        "old_original_winner": "GLM-5",
+        "old_reverse_winner": "GLM-5",
+        "corrected_reverse_winner": "GPT 5.2",
+        "old_stability_label": "order-stable",
+        "corrected_stability_label": "order-unstable"
+      },
+      {
+        "pair_id": "smallari_expansion40_017_group_fairness_individual_in_processing_fair__v02_expansion40__DeepSeek-V3.2__vs__GLM-5",
+        "old_original_winner": "GLM-5",
+        "old_reverse_winner": "GLM-5",
+        "corrected_reverse_winner": "DeepSeek-V3.2",
+        "old_stability_label": "order-stable",
+        "corrected_stability_label": "order-unstable"
+      },
+      {
+        "pair_id": "smallari_expansion40_021_brain_semantics_language_speech_lack__v02_expansion40__DeepSeek-V3.2__vs__GLM-5",
+        "old_original_winner": "DeepSeek-V3.2",
+        "old_reverse_winner": "DeepSeek-V3.2",
+        "corrected_reverse_winner": "GLM-5",
+        "old_stability_label": "order-stable",
+        "corrected_stability_label": "order-unstable"
+      },
+      {
+        "pair_id": "smallari_expansion40_022_series_time_language_llms_bridge__v02_expansion40__DeepSeek-V3.2__vs__GLM-5",
+        "old_original_winner": "DeepSeek-V3.2",
+        "old_reverse_winner": "DeepSeek-V3.2",
+        "corrected_reverse_winner": "GLM-5",
+        "old_stability_label": "order-stable",
+        "corrected_stability_label": "order-unstable"
+      },
+      {
+        "pair_id": "smallari_expansion40_024_causal_language_inference_discovery_graph__v02_expansion40__DeepSeek-V3.2__vs__GLM-5",
+        "old_original_winner": "DeepSeek-V3.2",
+        "old_reverse_winner": "DeepSeek-V3.2",
+        "corrected_reverse_winner": "GLM-5",
+        "old_stability_label": "order-stable",
+        "corrected_stability_label": "order-unstable"
+      },
+      {
+        "pair_id": "smallari_expansion40_029_bottleneck_concept_concepts_information_cbms__v02_expansion40__DeepSeek-V3.2__vs__GLM-5",
+        "old_original_winner": "DeepSeek-V3.2",
+        "old_reverse_winner": "DeepSeek-V3.2",
+        "corrected_reverse_winner": "GLM-5",
+        "old_stability_label": "order-stable",
+        "corrected_stability_label": "order-unstable"
+      },
+      {
+        "pair_id": "smallari_expansion40_029_bottleneck_concept_concepts_information_cbms__v02_expansion40__GLM-5__vs__GPT_5.2",
+        "old_original_winner": "GPT 5.2",
+        "old_reverse_winner": "GPT 5.2",
+        "corrected_reverse_winner": "GLM-5",
+        "old_stability_label": "order-stable",
+        "corrected_stability_label": "order-unstable"
+      },
+      {
+        "pair_id": "smallari_expansion40_032_jailbreak_language_attacks_adversarial_attack__v02_expansion40__DeepSeek-V3.2__vs__GLM-5",
+        "old_original_winner": "DeepSeek-V3.2",
+        "old_reverse_winner": "DeepSeek-V3.2",
+        "corrected_reverse_winner": "GLM-5",
+        "old_stability_label": "order-stable",
+        "corrected_stability_label": "order-unstable"
+      },
+      {
+        "pair_id": "smallari_expansion40_034_equivariant_networks_breaking_symmetry_simple__v02_expansion40__DeepSeek-V3.2__vs__GLM-5",
+        "old_original_winner": "DeepSeek-V3.2",
+        "old_reverse_winner": "DeepSeek-V3.2",
+        "corrected_reverse_winner": "GLM-5",
+        "old_stability_label": "order-stable",
+        "corrected_stability_label": "order-unstable"
+      },
+      {
+        "pair_id": "smallari_expansion40_039_generation_diffusion_multi_view_both_high_qualit__v02_expansion40__DeepSeek-V3.2__vs__GLM-5",
+        "old_original_winner": "DeepSeek-V3.2",
+        "old_reverse_winner": "GLM-5",
+        "corrected_reverse_winner": "DeepSeek-V3.2",
+        "old_stability_label": "order-unstable",
+        "corrected_stability_label": "order-stable"
+      }
+    ]
+  },
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20260721,
+    "unit": "pair_id case"
+  },
+  "old": {
+    "ordered": {
+      "win_loss_tie": {
+        "GPT 5.2": {
+          "wins": 977,
+          "losses": 223,
+          "ties": 0
+        },
+        "GLM-5": {
+          "wins": 372,
+          "losses": 828,
+          "ties": 0
+        },
+        "DeepSeek-V3.2": {
+          "wins": 223,
+          "losses": 977,
+          "ties": 0
+        },
+        "Claude-Sonnet-4.6-hq": {
+          "wins": 828,
+          "losses": 372,
+          "ties": 0
+        }
+      },
+      "winner_side": {
+        "A": 1430,
+        "B": 970,
+        "tie": 0
+      },
+      "model_pair_outcomes": {
+        "DeepSeek-V3.2 | Claude-Sonnet-4.6-hq": {
+          "ordered_judgments": 400,
+          "wins": {
+            "DeepSeek-V3.2": 45,
+            "Claude-Sonnet-4.6-hq": 355
+          },
+          "ties": 0,
+          "winner_side": {
+            "A": 223,
+            "B": 177,
+            "tie": 0
+          }
+        },
+        "GLM-5 | Claude-Sonnet-4.6-hq": {
+          "ordered_judgments": 400,
+          "wins": {
+            "GLM-5": 75,
+            "Claude-Sonnet-4.6-hq": 325
+          },
+          "ties": 0,
+          "winner_side": {
+            "A": 235,
+            "B": 165,
+            "tie": 0
+          }
+        },
+        "GLM-5 | DeepSeek-V3.2": {
+          "ordered_judgments": 400,
+          "wins": {
+            "GLM-5": 244,
+            "DeepSeek-V3.2": 156
+          },
+          "ties": 0,
+          "winner_side": {
+            "A": 258,
+            "B": 142,
+            "tie": 0
+          }
+        },
+        "GPT 5.2 | Claude-Sonnet-4.6-hq": {
+          "ordered_judgments": 400,
+          "wins": {
+            "GPT 5.2": 252,
+            "Claude-Sonnet-4.6-hq": 148
+          },
+          "ties": 0,
+          "winner_side": {
+            "A": 272,
+            "B": 128,
+            "tie": 0
+          }
+        },
+        "GPT 5.2 | DeepSeek-V3.2": {
+          "ordered_judgments": 400,
+          "wins": {
+            "GPT 5.2": 378,
+            "DeepSeek-V3.2": 22
+          },
+          "ties": 0,
+          "winner_side": {
+            "A": 210,
+            "B": 190,
+            "tie": 0
+          }
+        },
+        "GPT 5.2 | GLM-5": {
+          "ordered_judgments": 400,
+          "wins": {
+            "GPT 5.2": 347,
+            "GLM-5": 53
+          },
+          "ties": 0,
+          "winner_side": {
+            "A": 232,
+            "B": 168,
+            "tie": 0
+          }
+        }
+      }
+    },
+    "bt_centered_log_ability": {
+      "GPT 5.2": 1.2750656905526345,
+      "GLM-5": -0.7436044646033446,
+      "DeepSeek-V3.2": -1.2750656905565192,
+      "Claude-Sonnet-4.6-hq": 0.7436044646072302
+    },
+    "bt_case_bootstrap": {
+      "replicates": 10000,
+      "seed": 20260721,
+      "unit": "pair_id case sampled with both original and reverse orders",
+      "ci95_centered_log_ability": {
+        "GPT 5.2": [
+          1.1454903861382637,
+          1.4151328758607566
+        ],
+        "GLM-5": [
+          -0.8728297449660012,
+          -0.6218469974598182
+        ],
+        "DeepSeek-V3.2": [
+          -1.4210771713318036,
+          -1.1429560636657146
+        ],
+        "Claude-Sonnet-4.6-hq": [
+          0.6228782841597564,
+          0.8727151630196448
+        ]
+      },
+      "rank_distribution_top5": {
+        "GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 > DeepSeek-V3.2": 10000
+      },
+      "modal_full_ranking": "GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 > DeepSeek-V3.2",
+      "modal_ranking_fraction": 1.0,
+      "top1_fraction": {
+        "GPT 5.2": 1.0,
+        "GLM-5": 0.0,
+        "DeepSeek-V3.2": 0.0,
+        "Claude-Sonnet-4.6-hq": 0.0
+      }
+    },
+    "condorcet": {
+      "beat_counts": {
+        "GPT 5.2": 3,
+        "GLM-5": 1,
+        "DeepSeek-V3.2": 0,
+        "Claude-Sonnet-4.6-hq": 2
+      },
+      "transitive_no_cycle": true,
+      "condorcet_winner": "GPT 5.2",
+      "head_to_head": {
+        "GPT 5.2 vs GLM-5": {
+          "wins": {
+            "GPT 5.2": 347,
+            "GLM-5": 53
+          },
+          "majority": "GPT 5.2"
+        },
+        "GPT 5.2 vs DeepSeek-V3.2": {
+          "wins": {
+            "GPT 5.2": 378,
+            "DeepSeek-V3.2": 22
+          },
+          "majority": "GPT 5.2"
+        },
+        "GPT 5.2 vs Claude-Sonnet-4.6-hq": {
+          "wins": {
+            "GPT 5.2": 252,
+            "Claude-Sonnet-4.6-hq": 148
+          },
+          "majority": "GPT 5.2"
+        },
+        "GLM-5 vs DeepSeek-V3.2": {
+          "wins": {
+            "GLM-5": 244,
+            "DeepSeek-V3.2": 156
+          },
+          "majority": "GLM-5"
+        },
+        "GLM-5 vs Claude-Sonnet-4.6-hq": {
+          "wins": {
+            "GLM-5": 75,
+            "Claude-Sonnet-4.6-hq": 325
+          },
+          "majority": "Claude-Sonnet-4.6-hq"
+        },
+        "DeepSeek-V3.2 vs Claude-Sonnet-4.6-hq": {
+          "wins": {
+            "DeepSeek-V3.2": 45,
+            "Claude-Sonnet-4.6-hq": 355
+          },
+          "majority": "Claude-Sonnet-4.6-hq"
+        }
+      }
+    },
+    "folded": {
+      "stability_counts": {
+        "order-stable": 959,
+        "order-unstable": 241
+      },
+      "model_pair_outcomes": {
+        "DeepSeek-V3.2 | Claude-Sonnet-4.6-hq": {
+          "wins": {
+            "DeepSeek-V3.2": 11,
+            "Claude-Sonnet-4.6-hq": 166
+          },
+          "ties": 23,
+          "cases": 200
+        },
+        "GLM-5 | Claude-Sonnet-4.6-hq": {
+          "wins": {
+            "GLM-5": 18,
+            "Claude-Sonnet-4.6-hq": 143
+          },
+          "ties": 39,
+          "cases": 200
+        },
+        "GLM-5 | DeepSeek-V3.2": {
+          "wins": {
+            "GLM-5": 94,
+            "DeepSeek-V3.2": 50
+          },
+          "ties": 56,
+          "cases": 200
+        },
+        "GPT 5.2 | Claude-Sonnet-4.6-hq": {
+          "wins": {
+            "GPT 5.2": 90,
+            "Claude-Sonnet-4.6-hq": 38
+          },
+          "ties": 72,
+          "cases": 200
+        },
+        "GPT 5.2 | DeepSeek-V3.2": {
+          "wins": {
+            "GPT 5.2": 182,
+            "DeepSeek-V3.2": 4
+          },
+          "ties": 14,
+          "cases": 200
+        },
+        "GPT 5.2 | GLM-5": {
+          "wins": {
+            "GPT 5.2": 155,
+            "GLM-5": 8
+          },
+          "ties": 37,
+          "cases": 200
+        }
+      },
+      "bt_centered_log_ability": {
+        "GPT 5.2": 1.2691784811556084,
+        "GLM-5": -0.7401965111302251,
+        "DeepSeek-V3.2": -1.2691784811603626,
+        "Claude-Sonnet-4.6-hq": 0.7401965111349789
+      },
+      "bt_ranking": "GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 > DeepSeek-V3.2"
+    },
+    "ordered_judgments": 2400,
+    "folded_cases": 1200
+  },
+  "corrected": {
+    "ordered": {
+      "win_loss_tie": {
+        "GPT 5.2": {
+          "wins": 975,
+          "losses": 225,
+          "ties": 0
+        },
+        "GLM-5": {
+          "wins": 375,
+          "losses": 825,
+          "ties": 0
+        },
+        "DeepSeek-V3.2": {
+          "wins": 222,
+          "losses": 978,
+          "ties": 0
+        },
+        "Claude-Sonnet-4.6-hq": {
+          "wins": 828,
+          "losses": 372,
+          "ties": 0
+        }
+      },
+      "winner_side": {
+        "A": 1440,
+        "B": 960,
+        "tie": 0
+      },
+      "model_pair_outcomes": {
+        "DeepSeek-V3.2 | Claude-Sonnet-4.6-hq": {
+          "ordered_judgments": 400,
+          "wins": {
+            "DeepSeek-V3.2": 45,
+            "Claude-Sonnet-4.6-hq": 355
+          },
+          "ties": 0,
+          "winner_side": {
+            "A": 223,
+            "B": 177,
+            "tie": 0
+          }
+        },
+        "GLM-5 | Claude-Sonnet-4.6-hq": {
+          "ordered_judgments": 400,
+          "wins": {
+            "GLM-5": 75,
+            "Claude-Sonnet-4.6-hq": 325
+          },
+          "ties": 0,
+          "winner_side": {
+            "A": 235,
+            "B": 165,
+            "tie": 0
+          }
+        },
+        "GLM-5 | DeepSeek-V3.2": {
+          "ordered_judgments": 400,
+          "wins": {
+            "GLM-5": 247,
+            "DeepSeek-V3.2": 153
+          },
+          "ties": 0,
+          "winner_side": {
+            "A": 259,
+            "B": 141,
+            "tie": 0
+          }
+        },
+        "GPT 5.2 | Claude-Sonnet-4.6-hq": {
+          "ordered_judgments": 400,
+          "wins": {
+            "GPT 5.2": 252,
+            "Claude-Sonnet-4.6-hq": 148
+          },
+          "ties": 0,
+          "winner_side": {
+            "A": 272,
+            "B": 128,
+            "tie": 0
+          }
+        },
+        "GPT 5.2 | DeepSeek-V3.2": {
+          "ordered_judgments": 400,
+          "wins": {
+            "GPT 5.2": 376,
+            "DeepSeek-V3.2": 24
+          },
+          "ties": 0,
+          "winner_side": {
+            "A": 216,
+            "B": 184,
+            "tie": 0
+          }
+        },
+        "GPT 5.2 | GLM-5": {
+          "ordered_judgments": 400,
+          "wins": {
+            "GPT 5.2": 347,
+            "GLM-5": 53
+          },
+          "ties": 0,
+          "winner_side": {
+            "A": 235,
+            "B": 165,
+            "tie": 0
+          }
+        }
+      }
+    },
+    "bt_centered_log_ability": {
+      "GPT 5.2": 1.2650499080440096,
+      "GLM-5": -0.7313056937253564,
+      "DeepSeek-V3.2": -1.276136405181996,
+      "Claude-Sonnet-4.6-hq": 0.7423921908633422
+    },
+    "bt_case_bootstrap": {
+      "replicates": 10000,
+      "seed": 20260721,
+      "unit": "pair_id case sampled with both original and reverse orders",
+      "ci95_centered_log_ability": {
+        "GPT 5.2": [
+          1.1351332799787661,
+          1.4031306487659974
+        ],
+        "GLM-5": [
+          -0.8567236148136006,
+          -0.6119490844696622
+        ],
+        "DeepSeek-V3.2": [
+          -1.4227359452736708,
+          -1.1460373341566692
+        ],
+        "Claude-Sonnet-4.6-hq": [
+          0.6223069903916534,
+          0.8703198722931051
+        ]
+      },
+      "rank_distribution_top5": {
+        "GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 > DeepSeek-V3.2": 10000
+      },
+      "modal_full_ranking": "GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 > DeepSeek-V3.2",
+      "modal_ranking_fraction": 1.0,
+      "top1_fraction": {
+        "GPT 5.2": 1.0,
+        "GLM-5": 0.0,
+        "DeepSeek-V3.2": 0.0,
+        "Claude-Sonnet-4.6-hq": 0.0
+      }
+    },
+    "condorcet": {
+      "beat_counts": {
+        "GPT 5.2": 3,
+        "GLM-5": 1,
+        "DeepSeek-V3.2": 0,
+        "Claude-Sonnet-4.6-hq": 2
+      },
+      "transitive_no_cycle": true,
+      "condorcet_winner": "GPT 5.2",
+      "head_to_head": {
+        "GPT 5.2 vs GLM-5": {
+          "wins": {
+            "GPT 5.2": 347,
+            "GLM-5": 53
+          },
+          "majority": "GPT 5.2"
+        },
+        "GPT 5.2 vs DeepSeek-V3.2": {
+          "wins": {
+            "GPT 5.2": 376,
+            "DeepSeek-V3.2": 24
+          },
+          "majority": "GPT 5.2"
+        },
+        "GPT 5.2 vs Claude-Sonnet-4.6-hq": {
+          "wins": {
+            "GPT 5.2": 252,
+            "Claude-Sonnet-4.6-hq": 148
+          },
+          "majority": "GPT 5.2"
+        },
+        "GLM-5 vs DeepSeek-V3.2": {
+          "wins": {
+            "GLM-5": 247,
+            "DeepSeek-V3.2": 153
+          },
+          "majority": "GLM-5"
+        },
+        "GLM-5 vs Claude-Sonnet-4.6-hq": {
+          "wins": {
+            "GLM-5": 75,
+            "Claude-Sonnet-4.6-hq": 325
+          },
+          "majority": "Claude-Sonnet-4.6-hq"
+        },
+        "DeepSeek-V3.2 vs Claude-Sonnet-4.6-hq": {
+          "wins": {
+            "DeepSeek-V3.2": 45,
+            "Claude-Sonnet-4.6-hq": 355
+          },
+          "majority": "Claude-Sonnet-4.6-hq"
+        }
+      }
+    },
+    "folded": {
+      "stability_counts": {
+        "order-stable": 950,
+        "order-unstable": 250
+      },
+      "model_pair_outcomes": {
+        "DeepSeek-V3.2 | Claude-Sonnet-4.6-hq": {
+          "wins": {
+            "DeepSeek-V3.2": 11,
+            "Claude-Sonnet-4.6-hq": 166
+          },
+          "ties": 23,
+          "cases": 200
+        },
+        "GLM-5 | Claude-Sonnet-4.6-hq": {
+          "wins": {
+            "GLM-5": 18,
+            "Claude-Sonnet-4.6-hq": 143
+          },
+          "ties": 39,
+          "cases": 200
+        },
+        "GLM-5 | DeepSeek-V3.2": {
+          "wins": {
+            "GLM-5": 93,
+            "DeepSeek-V3.2": 46
+          },
+          "ties": 61,
+          "cases": 200
+        },
+        "GPT 5.2 | Claude-Sonnet-4.6-hq": {
+          "wins": {
+            "GPT 5.2": 90,
+            "Claude-Sonnet-4.6-hq": 38
+          },
+          "ties": 72,
+          "cases": 200
+        },
+        "GPT 5.2 | DeepSeek-V3.2": {
+          "wins": {
+            "GPT 5.2": 180,
+            "DeepSeek-V3.2": 4
+          },
+          "ties": 16,
+          "cases": 200
+        },
+        "GPT 5.2 | GLM-5": {
+          "wins": {
+            "GPT 5.2": 154,
+            "GLM-5": 7
+          },
+          "ties": 39,
+          "cases": 200
+        }
+      },
+      "bt_centered_log_ability": {
+        "GPT 5.2": 1.2592407948450826,
+        "GLM-5": -0.7279775060584939,
+        "DeepSeek-V3.2": -1.2702707965582918,
+        "Claude-Sonnet-4.6-hq": 0.739007507771704
+      },
+      "bt_ranking": "GPT 5.2 > Claude-Sonnet-4.6-hq > GLM-5 > DeepSeek-V3.2"
+    },
+    "ordered_judgments": 2400,
+    "folded_cases": 1200
+  },
+  "comparison": {
+    "ordered_wlt_delta": {
+      "GPT 5.2": {
+        "wins": -2,
+        "losses": 2,
+        "ties": 0
+      },
+      "GLM-5": {
+        "wins": 3,
+        "losses": -3,
+        "ties": 0
+      },
+      "DeepSeek-V3.2": {
+        "wins": -1,
+        "losses": 1,
+        "ties": 0
+      },
+      "Claude-Sonnet-4.6-hq": {
+        "wins": 0,
+        "losses": 0,
+        "ties": 0
+      }
+    },
+    "side_count_delta": {
+      "A": 10,
+      "B": -10,
+      "tie": 0
+    }
+  },
+  "release_ready": false,
+  "allowed_to_publish_leaderboard": false
+}

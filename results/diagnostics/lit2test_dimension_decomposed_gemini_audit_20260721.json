@@ -1,0 +1,4906 @@
+{
+  "status": "pass",
+  "protocol": {
+    "protocol_version": "lit2test_dimension_decomposed_gemini_audit_v1_20260721",
+    "model": "Gemini-3.1-Pro-Preview-Third",
+    "endpoint": "${API_BASE_URL}/responses",
+    "prompt_sha256": "f7420b4019b440f2abdea3e78d0a96713d14938eb9fa0da669684956b28753f6",
+    "audit_tasks_sha256": "6ec98a5675b4b6966c7df3d2a4ec607dc40c28cacbb7a95727277408f91cc94a",
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 20260721,
+    "bootstrap_unit": "case"
+  },
+  "completion_integrity": {
+    "status": "pass",
+    "task_rows": 188,
+    "unique_audit_ids": 188,
+    "valid_judgments": 188,
+    "real_tasks": 180,
+    "control_tasks": 8,
+    "real_cases": 90,
+    "control_cases": 4,
+    "model_pair_counts": {
+      "Claude-Sonnet-4.6-hq vs DeepSeek-V3.2": 15,
+      "Claude-Sonnet-4.6-hq vs GLM-5": 15,
+      "Claude-Sonnet-4.6-hq vs GPT 5.2": 15,
+      "DeepSeek-V3.2 vs GLM-5": 15,
+      "DeepSeek-V3.2 vs GPT 5.2": 15,
+      "GLM-5 vs GPT 5.2": 15
+    },
+    "corrected_stability_counts": {
+      "order-stable": 60,
+      "order-unstable": 30
+    },
+    "sampling_stability_counts": {
+      "order-stable": 60,
+      "order-unstable": 30
+    },
+    "stability_transitions": [],
+    "orientation_mismatches": [],
+    "duplicate_final": {},
+    "missing": [],
+    "errors": []
+  },
+  "execution": {
+    "status": "pass",
+    "merged_at": "2026-07-21T03:50:27.934308+08:00",
+    "strategy": "two disjoint deterministic shards, one sequential worker per shard",
+    "shard_count": 2,
+    "max_concurrent_requests": 2,
+    "shard_rule": "serialized audit task index modulo 2",
+    "shared_resume_records_deduped": 7,
+    "unique_valid_judgments": 188,
+    "completion_gate_188": true,
+    "raw_attempt_rows": 212,
+    "run_log_rows": 212,
+    "retry_or_failure_attempts": 24,
+    "failure_reasons": {
+      "http_429": 1,
+      "model_output_json_error": 4,
+      "schema_validation_error": 19
+    },
+    "format_normalizations": {
+      "single_outer_markdown_json_fence_removed": 29
+    },
+    "http_429_policy": "one transient 429; honored retry/backoff; no recurrence",
+    "runner_sha256": "568f10da1a85e7e87a58246b56dc6abe39291977a13963477843abe813747ff2",
+    "shard_completion_reports": [
+      "outputs/lit2test_dimension_decomposed_gemini_audit/shards/shard0/completion_report.json",
+      "outputs/lit2test_dimension_decomposed_gemini_audit/shards/shard1/completion_report.json"
+    ]
+  },
+  "winner_vs_holistic": {
+    "overall": {
+      "structured_overall": {
+        "exact": {
+          "numerator": 152,
+          "denominator": 180,
+          "rate": 0.8444444444444444,
+          "ci95": [
+            0.7888888888888889,
+            0.8944444444444445
+          ],
+          "bootstrap_unit": "case"
+        },
+        "decisive_only": {
+          "numerator": 152,
+          "denominator": 176,
+          "rate": 0.8636363636363636,
+          "ci95": [
+            0.8103448275862069,
+            0.9142857142857143
+          ],
+          "bootstrap_unit": "case"
+        },
+        "decisive_coverage": {
+          "numerator": 176,
+          "denominator": 180,
+          "rate": 0.9777777777777777,
+          "ci95": [
+            0.9555555555555556,
+            0.9944444444444445
+          ],
+          "bootstrap_unit": "case"
+        },
+        "prediction_tie_rate": {
+          "numerator": 4,
+          "denominator": 180,
+          "rate": 0.022222222222222223,
+          "ci95": [
+            0.005555555555555556,
+            0.044444444444444446
+          ],
+          "bootstrap_unit": "case"
+        },
+        "cohen_kappa": 0.6711899791231732
+      },
+      "score_sum": {
+        "exact": {
+          "numerator": 145,
+          "denominator": 180,
+          "rate": 0.8055555555555556,
+          "ci95": [
+            0.7444444444444445,
+            0.8611111111111112
+          ],
+          "bootstrap_unit": "case"
+        },
+        "decisive_only": {
+          "numerator": 145,
+          "denominator": 166,
+          "rate": 0.8734939759036144,
+          "ci95": [
+            0.8181818181818182,
+            0.9226304945054944
+          ],
+          "bootstrap_unit": "case"
+        },
+        "decisive_coverage": {
+          "numerator": 166,
+          "denominator": 180,
+          "rate": 0.9222222222222223,
+          "ci95": [
+            0.8777777777777778,
+            0.9611111111111111
+          ],
+          "bootstrap_unit": "case"
+        },
+        "prediction_tie_rate": {
+          "numerator": 14,
+          "denominator": 180,
+          "rate": 0.07777777777777778,
+          "ci95": [
+            0.03888888888888889,
+            0.12222222222222222
+          ],
+          "bootstrap_unit": "case"
+        },
+        "cohen_kappa": 0.609084139985108
+      },
+      "dimension_majority": {
+        "exact": {
+          "numerator": 145,
+          "denominator": 180,
+          "rate": 0.8055555555555556,
+          "ci95": [
+            0.7444444444444445,
+            0.8611111111111112
+          ],
+          "bootstrap_unit": "case"
+        },
+        "decisive_only": {
+          "numerator": 145,
+          "denominator": 166,
+          "rate": 0.8734939759036144,
+          "ci95": [
+            0.8170731707317073,
+            0.9235771222110477
+          ],
+          "bootstrap_unit": "case"
+        },
+        "decisive_coverage": {
+          "numerator": 166,
+          "denominator": 180,
+          "rate": 0.9222222222222223,
+          "ci95": [
+            0.8777777777777778,
+            0.9611111111111111
+          ],
+          "bootstrap_unit": "case"
+        },
+        "prediction_tie_rate": {
+          "numerator": 14,
+          "denominator": 180,
+          "rate": 0.07777777777777778,
+          "ci95": [
+            0.03888888888888889,
+            0.12222222222222222
+          ],
+          "bootstrap_unit": "case"
+        },
+        "cohen_kappa": 0.6077210460772106
+      }
+    },
+    "by_stability": {
+      "order-stable": {
+        "structured_overall": {
+          "exact": {
+            "numerator": 110,
+            "denominator": 120,
+            "rate": 0.9166666666666666,
+            "ci95": [
+              0.8583333333333333,
+              0.9666666666666667
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 110,
+            "denominator": 118,
+            "rate": 0.9322033898305084,
+            "ci95": [
+              0.8803418803418803,
+              0.9747899159663865
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 118,
+            "denominator": 120,
+            "rate": 0.9833333333333333,
+            "ci95": [
+              0.9583333333333334,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 2,
+            "denominator": 120,
+            "rate": 0.016666666666666666,
+            "ci95": [
+              0.0,
+              0.041666666666666664
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.8360655737704918
+        },
+        "score_sum": {
+          "exact": {
+            "numerator": 105,
+            "denominator": 120,
+            "rate": 0.875,
+            "ci95": [
+              0.8083333333333333,
+              0.9333333333333333
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 105,
+            "denominator": 113,
+            "rate": 0.9292035398230089,
+            "ci95": [
+              0.8738738738738738,
+              0.9739130434782609
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 113,
+            "denominator": 120,
+            "rate": 0.9416666666666667,
+            "ci95": [
+              0.9,
+              0.975
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 7,
+            "denominator": 120,
+            "rate": 0.058333333333333334,
+            "ci95": [
+              0.025,
+              0.1
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.7637795275590551
+        },
+        "dimension_majority": {
+          "exact": {
+            "numerator": 104,
+            "denominator": 120,
+            "rate": 0.8666666666666667,
+            "ci95": [
+              0.8,
+              0.925
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 104,
+            "denominator": 112,
+            "rate": 0.9285714285714286,
+            "ci95": [
+              0.8727272727272727,
+              0.9736842105263158
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 112,
+            "denominator": 120,
+            "rate": 0.9333333333333333,
+            "ci95": [
+              0.8833333333333333,
+              0.975
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 8,
+            "denominator": 120,
+            "rate": 0.06666666666666667,
+            "ci95": [
+              0.025,
+              0.11666666666666667
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.75
+        }
+      },
+      "order-unstable": {
+        "structured_overall": {
+          "exact": {
+            "numerator": 42,
+            "denominator": 60,
+            "rate": 0.7,
+            "ci95": [
+              0.5833333333333334,
+              0.8
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 42,
+            "denominator": 58,
+            "rate": 0.7241379310344828,
+            "ci95": [
+              0.6206896551724138,
+              0.8245614035087719
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 58,
+            "denominator": 60,
+            "rate": 0.9666666666666667,
+            "ci95": [
+              0.9166666666666666,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 2,
+            "denominator": 60,
+            "rate": 0.03333333333333333,
+            "ci95": [
+              0.0,
+              0.08333333333333333
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": -0.05882352941176489
+        },
+        "score_sum": {
+          "exact": {
+            "numerator": 40,
+            "denominator": 60,
+            "rate": 0.6666666666666666,
+            "ci95": [
+              0.5666666666666667,
+              0.7666666666666667
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 40,
+            "denominator": 53,
+            "rate": 0.7547169811320755,
+            "ci95": [
+              0.6481481481481481,
+              0.86
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 53,
+            "denominator": 60,
+            "rate": 0.8833333333333333,
+            "ci95": [
+              0.7833333333333333,
+              0.9666666666666667
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 7,
+            "denominator": 60,
+            "rate": 0.11666666666666667,
+            "ci95": [
+              0.03333333333333333,
+              0.21666666666666667
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": -0.05078809106830147
+        },
+        "dimension_majority": {
+          "exact": {
+            "numerator": 41,
+            "denominator": 60,
+            "rate": 0.6833333333333333,
+            "ci95": [
+              0.5833333333333334,
+              0.7833333333333333
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 41,
+            "denominator": 54,
+            "rate": 0.7592592592592593,
+            "ci95": [
+              0.6491228070175439,
+              0.8653846153846154
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 54,
+            "denominator": 60,
+            "rate": 0.9,
+            "ci95": [
+              0.8166666666666667,
+              0.9666666666666667
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 6,
+            "denominator": 60,
+            "rate": 0.1,
+            "ci95": [
+              0.016666666666666666,
+              0.2
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": -0.05166051660516602
+        }
+      }
+    },
+    "by_model_pair": {
+      "Claude-Sonnet-4.6-hq vs DeepSeek-V3.2": {
+        "structured_overall": {
+          "exact": {
+            "numerator": 25,
+            "denominator": 30,
+            "rate": 0.8333333333333334,
+            "ci95": [
+              0.7,
+              0.9333333333333333
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 25,
+            "denominator": 29,
+            "rate": 0.8620689655172413,
+            "ci95": [
+              0.7405555555555556,
+              0.9666666666666667
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 29,
+            "denominator": 30,
+            "rate": 0.9666666666666667,
+            "ci95": [
+              0.9,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 1,
+            "denominator": 30,
+            "rate": 0.03333333333333333,
+            "ci95": [
+              0.0,
+              0.1
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.6341463414634148
+        },
+        "score_sum": {
+          "exact": {
+            "numerator": 23,
+            "denominator": 30,
+            "rate": 0.7666666666666667,
+            "ci95": [
+              0.6333333333333333,
+              0.9
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 23,
+            "denominator": 27,
+            "rate": 0.8518518518518519,
+            "ci95": [
+              0.7241379310344828,
+              0.9629629629629629
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 27,
+            "denominator": 30,
+            "rate": 0.9,
+            "ci95": [
+              0.8,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 3,
+            "denominator": 30,
+            "rate": 0.1,
+            "ci95": [
+              0.0,
+              0.2
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.5333333333333334
+        },
+        "dimension_majority": {
+          "exact": {
+            "numerator": 23,
+            "denominator": 30,
+            "rate": 0.7666666666666667,
+            "ci95": [
+              0.6333333333333333,
+              0.9
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 23,
+            "denominator": 27,
+            "rate": 0.8518518518518519,
+            "ci95": [
+              0.7241379310344828,
+              0.9629629629629629
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 27,
+            "denominator": 30,
+            "rate": 0.9,
+            "ci95": [
+              0.8,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 3,
+            "denominator": 30,
+            "rate": 0.1,
+            "ci95": [
+              0.0,
+              0.2
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.5227272727272728
+        }
+      },
+      "Claude-Sonnet-4.6-hq vs GLM-5": {
+        "structured_overall": {
+          "exact": {
+            "numerator": 25,
+            "denominator": 30,
+            "rate": 0.8333333333333334,
+            "ci95": [
+              0.7,
+              0.9333333333333333
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 25,
+            "denominator": 30,
+            "rate": 0.8333333333333334,
+            "ci95": [
+              0.7,
+              0.9333333333333333
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 30,
+            "denominator": 30,
+            "rate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 0,
+            "denominator": 30,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.6511627906976745
+        },
+        "score_sum": {
+          "exact": {
+            "numerator": 24,
+            "denominator": 30,
+            "rate": 0.8,
+            "ci95": [
+              0.6666666666666666,
+              0.9333333333333333
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 24,
+            "denominator": 29,
+            "rate": 0.8275862068965517,
+            "ci95": [
+              0.7,
+              0.9333333333333333
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 29,
+            "denominator": 30,
+            "rate": 0.9666666666666667,
+            "ci95": [
+              0.9,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 1,
+            "denominator": 30,
+            "rate": 0.03333333333333333,
+            "ci95": [
+              0.0,
+              0.1
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.590909090909091
+        },
+        "dimension_majority": {
+          "exact": {
+            "numerator": 24,
+            "denominator": 30,
+            "rate": 0.8,
+            "ci95": [
+              0.6666666666666666,
+              0.9
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 24,
+            "denominator": 29,
+            "rate": 0.8275862068965517,
+            "ci95": [
+              0.7,
+              0.9333333333333333
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 29,
+            "denominator": 30,
+            "rate": 0.9666666666666667,
+            "ci95": [
+              0.9,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 1,
+            "denominator": 30,
+            "rate": 0.03333333333333333,
+            "ci95": [
+              0.0,
+              0.1
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.590909090909091
+        }
+      },
+      "Claude-Sonnet-4.6-hq vs GPT 5.2": {
+        "structured_overall": {
+          "exact": {
+            "numerator": 24,
+            "denominator": 30,
+            "rate": 0.8,
+            "ci95": [
+              0.6666666666666666,
+              0.9333333333333333
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 24,
+            "denominator": 29,
+            "rate": 0.8275862068965517,
+            "ci95": [
+              0.7,
+              0.9333333333333333
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 29,
+            "denominator": 30,
+            "rate": 0.9666666666666667,
+            "ci95": [
+              0.9,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 1,
+            "denominator": 30,
+            "rate": 0.03333333333333333,
+            "ci95": [
+              0.0,
+              0.1
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.5714285714285715
+        },
+        "score_sum": {
+          "exact": {
+            "numerator": 22,
+            "denominator": 30,
+            "rate": 0.7333333333333333,
+            "ci95": [
+              0.6,
+              0.8666666666666667
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 22,
+            "denominator": 26,
+            "rate": 0.8461538461538461,
+            "ci95": [
+              0.72,
+              0.9615384615384616
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 26,
+            "denominator": 30,
+            "rate": 0.8666666666666667,
+            "ci95": [
+              0.7333333333333333,
+              0.9666666666666667
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 4,
+            "denominator": 30,
+            "rate": 0.13333333333333333,
+            "ci95": [
+              0.03333333333333333,
+              0.26666666666666666
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.47826086956521735
+        },
+        "dimension_majority": {
+          "exact": {
+            "numerator": 22,
+            "denominator": 30,
+            "rate": 0.7333333333333333,
+            "ci95": [
+              0.6,
+              0.8666666666666667
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 22,
+            "denominator": 26,
+            "rate": 0.8461538461538461,
+            "ci95": [
+              0.7142857142857143,
+              0.9615384615384616
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 26,
+            "denominator": 30,
+            "rate": 0.8666666666666667,
+            "ci95": [
+              0.7333333333333333,
+              0.9666666666666667
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 4,
+            "denominator": 30,
+            "rate": 0.13333333333333333,
+            "ci95": [
+              0.03333333333333333,
+              0.26666666666666666
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.47826086956521735
+        }
+      },
+      "DeepSeek-V3.2 vs GLM-5": {
+        "structured_overall": {
+          "exact": {
+            "numerator": 24,
+            "denominator": 30,
+            "rate": 0.8,
+            "ci95": [
+              0.6,
+              0.9666666666666667
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 24,
+            "denominator": 29,
+            "rate": 0.8275862068965517,
+            "ci95": [
+              0.6333333333333333,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 29,
+            "denominator": 30,
+            "rate": 0.9666666666666667,
+            "ci95": [
+              0.9,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 1,
+            "denominator": 30,
+            "rate": 0.03333333333333333,
+            "ci95": [
+              0.0,
+              0.1
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.5945945945945946
+        },
+        "score_sum": {
+          "exact": {
+            "numerator": 23,
+            "denominator": 30,
+            "rate": 0.7666666666666667,
+            "ci95": [
+              0.5666666666666667,
+              0.9333333333333333
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 23,
+            "denominator": 27,
+            "rate": 0.8518518518518519,
+            "ci95": [
+              0.6428571428571429,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 27,
+            "denominator": 30,
+            "rate": 0.9,
+            "ci95": [
+              0.8,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 3,
+            "denominator": 30,
+            "rate": 0.1,
+            "ci95": [
+              0.0,
+              0.2
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.5512820512820514
+        },
+        "dimension_majority": {
+          "exact": {
+            "numerator": 23,
+            "denominator": 30,
+            "rate": 0.7666666666666667,
+            "ci95": [
+              0.5666666666666667,
+              0.9333333333333333
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 23,
+            "denominator": 27,
+            "rate": 0.8518518518518519,
+            "ci95": [
+              0.6428571428571429,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 27,
+            "denominator": 30,
+            "rate": 0.9,
+            "ci95": [
+              0.8,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 3,
+            "denominator": 30,
+            "rate": 0.1,
+            "ci95": [
+              0.0,
+              0.2
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.5512820512820514
+        }
+      },
+      "DeepSeek-V3.2 vs GPT 5.2": {
+        "structured_overall": {
+          "exact": {
+            "numerator": 28,
+            "denominator": 30,
+            "rate": 0.9333333333333333,
+            "ci95": [
+              0.8333333333333334,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 28,
+            "denominator": 30,
+            "rate": 0.9333333333333333,
+            "ci95": [
+              0.8333333333333334,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 30,
+            "denominator": 30,
+            "rate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 0,
+            "denominator": 30,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.8571428571428572
+        },
+        "score_sum": {
+          "exact": {
+            "numerator": 28,
+            "denominator": 30,
+            "rate": 0.9333333333333333,
+            "ci95": [
+              0.8333333333333334,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 28,
+            "denominator": 30,
+            "rate": 0.9333333333333333,
+            "ci95": [
+              0.8333333333333334,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 30,
+            "denominator": 30,
+            "rate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 0,
+            "denominator": 30,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.8571428571428572
+        },
+        "dimension_majority": {
+          "exact": {
+            "numerator": 28,
+            "denominator": 30,
+            "rate": 0.9333333333333333,
+            "ci95": [
+              0.8333333333333334,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 28,
+            "denominator": 30,
+            "rate": 0.9333333333333333,
+            "ci95": [
+              0.8333333333333334,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 30,
+            "denominator": 30,
+            "rate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 0,
+            "denominator": 30,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.8571428571428572
+        }
+      },
+      "GLM-5 vs GPT 5.2": {
+        "structured_overall": {
+          "exact": {
+            "numerator": 26,
+            "denominator": 30,
+            "rate": 0.8666666666666667,
+            "ci95": [
+              0.7,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 26,
+            "denominator": 29,
+            "rate": 0.896551724137931,
+            "ci95": [
+              0.7777777777777778,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 29,
+            "denominator": 30,
+            "rate": 0.9666666666666667,
+            "ci95": [
+              0.9,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 1,
+            "denominator": 30,
+            "rate": 0.03333333333333333,
+            "ci95": [
+              0.0,
+              0.1
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.7209302325581396
+        },
+        "score_sum": {
+          "exact": {
+            "numerator": 25,
+            "denominator": 30,
+            "rate": 0.8333333333333334,
+            "ci95": [
+              0.6666666666666666,
+              0.9666666666666667
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 25,
+            "denominator": 27,
+            "rate": 0.9259259259259259,
+            "ci95": [
+              0.8214285714285714,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 27,
+            "denominator": 30,
+            "rate": 0.9,
+            "ci95": [
+              0.7333333333333333,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 3,
+            "denominator": 30,
+            "rate": 0.1,
+            "ci95": [
+              0.0,
+              0.26666666666666666
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.6666666666666667
+        },
+        "dimension_majority": {
+          "exact": {
+            "numerator": 25,
+            "denominator": 30,
+            "rate": 0.8333333333333334,
+            "ci95": [
+              0.6666666666666666,
+              0.9666666666666667
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 25,
+            "denominator": 27,
+            "rate": 0.9259259259259259,
+            "ci95": [
+              0.8214285714285714,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 27,
+            "denominator": 30,
+            "rate": 0.9,
+            "ci95": [
+              0.7333333333333333,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 3,
+            "denominator": 30,
+            "rate": 0.1,
+            "ci95": [
+              0.0,
+              0.26666666666666666
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.6666666666666667
+        }
+      }
+    },
+    "by_order": {
+      "original": {
+        "structured_overall": {
+          "exact": {
+            "numerator": 76,
+            "denominator": 90,
+            "rate": 0.8444444444444444,
+            "ci95": [
+              0.7666666666666667,
+              0.9111111111111111
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 76,
+            "denominator": 89,
+            "rate": 0.8539325842696629,
+            "ci95": [
+              0.7752808988764045,
+              0.9213483146067416
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 89,
+            "denominator": 90,
+            "rate": 0.9888888888888889,
+            "ci95": [
+              0.9666666666666667,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 1,
+            "denominator": 90,
+            "rate": 0.011111111111111112,
+            "ci95": [
+              0.0,
+              0.03333333333333333
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.6685082872928176
+        },
+        "score_sum": {
+          "exact": {
+            "numerator": 73,
+            "denominator": 90,
+            "rate": 0.8111111111111111,
+            "ci95": [
+              0.7222222222222222,
+              0.8888888888888888
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 73,
+            "denominator": 84,
+            "rate": 0.8690476190476191,
+            "ci95": [
+              0.7976190476190477,
+              0.9404761904761905
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 84,
+            "denominator": 90,
+            "rate": 0.9333333333333333,
+            "ci95": [
+              0.8777777777777778,
+              0.9777777777777777
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 6,
+            "denominator": 90,
+            "rate": 0.06666666666666667,
+            "ci95": [
+              0.022222222222222223,
+              0.12222222222222222
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.6186440677966102
+        },
+        "dimension_majority": {
+          "exact": {
+            "numerator": 74,
+            "denominator": 90,
+            "rate": 0.8222222222222222,
+            "ci95": [
+              0.7444444444444445,
+              0.9
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 74,
+            "denominator": 85,
+            "rate": 0.8705882352941177,
+            "ci95": [
+              0.8,
+              0.9411764705882353
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 85,
+            "denominator": 90,
+            "rate": 0.9444444444444444,
+            "ci95": [
+              0.8888888888888888,
+              0.9888888888888889
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 5,
+            "denominator": 90,
+            "rate": 0.05555555555555555,
+            "ci95": [
+              0.011111111111111112,
+              0.1111111111111111
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.6357197065519858
+        }
+      },
+      "reverse": {
+        "structured_overall": {
+          "exact": {
+            "numerator": 76,
+            "denominator": 90,
+            "rate": 0.8444444444444444,
+            "ci95": [
+              0.7666666666666667,
+              0.9111111111111111
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 76,
+            "denominator": 87,
+            "rate": 0.8735632183908046,
+            "ci95": [
+              0.8045977011494253,
+              0.9425287356321839
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 87,
+            "denominator": 90,
+            "rate": 0.9666666666666667,
+            "ci95": [
+              0.9222222222222223,
+              1.0
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 3,
+            "denominator": 90,
+            "rate": 0.03333333333333333,
+            "ci95": [
+              0.0,
+              0.07777777777777778
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.6738286305979808
+        },
+        "score_sum": {
+          "exact": {
+            "numerator": 72,
+            "denominator": 90,
+            "rate": 0.8,
+            "ci95": [
+              0.7111111111111111,
+              0.8777777777777778
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 72,
+            "denominator": 82,
+            "rate": 0.8780487804878049,
+            "ci95": [
+              0.8048780487804879,
+              0.9390243902439024
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 82,
+            "denominator": 90,
+            "rate": 0.9111111111111111,
+            "ci95": [
+              0.8444444444444444,
+              0.9666666666666667
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 8,
+            "denominator": 90,
+            "rate": 0.08888888888888889,
+            "ci95": [
+              0.03333333333333333,
+              0.15555555555555556
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.5996045477014336
+        },
+        "dimension_majority": {
+          "exact": {
+            "numerator": 71,
+            "denominator": 90,
+            "rate": 0.7888888888888889,
+            "ci95": [
+              0.7,
+              0.8666666666666667
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_only": {
+            "numerator": 71,
+            "denominator": 81,
+            "rate": 0.8765432098765432,
+            "ci95": [
+              0.8024691358024691,
+              0.9382716049382716
+            ],
+            "bootstrap_unit": "case"
+          },
+          "decisive_coverage": {
+            "numerator": 81,
+            "denominator": 90,
+            "rate": 0.9,
+            "ci95": [
+              0.8333333333333334,
+              0.9555555555555556
+            ],
+            "bootstrap_unit": "case"
+          },
+          "prediction_tie_rate": {
+            "numerator": 9,
+            "denominator": 90,
+            "rate": 0.1,
+            "ci95": [
+              0.044444444444444446,
+              0.16666666666666666
+            ],
+            "bootstrap_unit": "case"
+          },
+          "cohen_kappa": 0.5805739514348784
+        }
+      }
+    }
+  },
+  "internal_consistency": {
+    "structured_overall_vs_score_sum": {
+      "exact": {
+        "numerator": 170,
+        "denominator": 180,
+        "rate": 0.9444444444444444,
+        "ci95": [
+          0.9111111111111111,
+          0.9722222222222222
+        ],
+        "bootstrap_unit": "case"
+      },
+      "decisive_only": {
+        "numerator": 166,
+        "denominator": 166,
+        "rate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "bootstrap_unit": "case"
+      },
+      "decisive_coverage": {
+        "numerator": 166,
+        "denominator": 180,
+        "rate": 0.9222222222222223,
+        "ci95": [
+          0.8777777777777778,
+          0.9611111111111111
+        ],
+        "bootstrap_unit": "case"
+      },
+      "prediction_tie_rate": {
+        "numerator": 4,
+        "denominator": 180,
+        "rate": 0.022222222222222223,
+        "ci95": [
+          0.005555555555555556,
+          0.044444444444444446
+        ],
+        "bootstrap_unit": "case"
+      },
+      "cohen_kappa": 0.8920863309352518
+    },
+    "structured_overall_vs_dimension_majority": {
+      "exact": {
+        "numerator": 170,
+        "denominator": 180,
+        "rate": 0.9444444444444444,
+        "ci95": [
+          0.9111111111111111,
+          0.9722222222222222
+        ],
+        "bootstrap_unit": "case"
+      },
+      "decisive_only": {
+        "numerator": 166,
+        "denominator": 166,
+        "rate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "bootstrap_unit": "case"
+      },
+      "decisive_coverage": {
+        "numerator": 166,
+        "denominator": 180,
+        "rate": 0.9222222222222223,
+        "ci95": [
+          0.8777777777777778,
+          0.9611111111111111
+        ],
+        "bootstrap_unit": "case"
+      },
+      "prediction_tie_rate": {
+        "numerator": 4,
+        "denominator": 180,
+        "rate": 0.022222222222222223,
+        "ci95": [
+          0.005555555555555556,
+          0.044444444444444446
+        ],
+        "bootstrap_unit": "case"
+      },
+      "cohen_kappa": 0.8918009136811733
+    },
+    "score_sum_vs_dimension_majority": {
+      "exact": {
+        "numerator": 178,
+        "denominator": 180,
+        "rate": 0.9888888888888889,
+        "ci95": [
+          0.9722222222222222,
+          1.0
+        ],
+        "bootstrap_unit": "case"
+      },
+      "decisive_only": {
+        "numerator": 165,
+        "denominator": 165,
+        "rate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "bootstrap_unit": "case"
+      },
+      "decisive_coverage": {
+        "numerator": 165,
+        "denominator": 180,
+        "rate": 0.9166666666666666,
+        "ci95": [
+          0.8722222222222222,
+          0.9555555555555556
+        ],
+        "bootstrap_unit": "case"
+      },
+      "prediction_tie_rate": {
+        "numerator": 14,
+        "denominator": 180,
+        "rate": 0.07777777777777778,
+        "ci95": [
+          0.03888888888888889,
+          0.12222222222222222
+        ],
+        "bootstrap_unit": "case"
+      },
+      "cohen_kappa": 0.9791013584117033
+    }
+  },
+  "order_robustness": {
+    "per_dimension": {
+      "grounding": {
+        "score_exact": {
+          "numerator": 154,
+          "denominator": 180,
+          "rate": 0.8555555555555555,
+          "ci95": [
+            0.8055555555555556,
+            0.9055555555555556
+          ],
+          "bootstrap_unit": "case"
+        },
+        "score_mae": {
+          "n": 180,
+          "mean": 0.14444444444444443,
+          "ci95": [
+            0.09444444444444444,
+            0.19444444444444445
+          ],
+          "bootstrap_unit": "case"
+        },
+        "winner_consistency": {
+          "numerator": 66,
+          "denominator": 90,
+          "rate": 0.7333333333333333,
+          "ci95": [
+            0.6444444444444445,
+            0.8222222222222222
+          ],
+          "bootstrap_unit": "case"
+        }
+      },
+      "hypothesis_specificity": {
+        "score_exact": {
+          "numerator": 167,
+          "denominator": 180,
+          "rate": 0.9277777777777778,
+          "ci95": [
+            0.8888888888888888,
+            0.9611111111111111
+          ],
+          "bootstrap_unit": "case"
+        },
+        "score_mae": {
+          "n": 180,
+          "mean": 0.07777777777777778,
+          "ci95": [
+            0.03888888888888889,
+            0.12222222222222222
+          ],
+          "bootstrap_unit": "case"
+        },
+        "winner_consistency": {
+          "numerator": 78,
+          "denominator": 90,
+          "rate": 0.8666666666666667,
+          "ci95": [
+            0.7888888888888889,
+            0.9333333333333333
+          ],
+          "bootstrap_unit": "case"
+        }
+      },
+      "minimality_feasibility": {
+        "score_exact": {
+          "numerator": 125,
+          "denominator": 180,
+          "rate": 0.6944444444444444,
+          "ci95": [
+            0.6166666666666667,
+            0.7666666666666667
+          ],
+          "bootstrap_unit": "case"
+        },
+        "score_mae": {
+          "n": 180,
+          "mean": 0.31666666666666665,
+          "ci95": [
+            0.2388888888888889,
+            0.4
+          ],
+          "bootstrap_unit": "case"
+        },
+        "winner_consistency": {
+          "numerator": 57,
+          "denominator": 90,
+          "rate": 0.6333333333333333,
+          "ci95": [
+            0.5333333333333333,
+            0.7333333333333333
+          ],
+          "bootstrap_unit": "case"
+        }
+      },
+      "decisive_metric": {
+        "score_exact": {
+          "numerator": 142,
+          "denominator": 180,
+          "rate": 0.7888888888888889,
+          "ci95": [
+            0.7388888888888889,
+            0.8388888888888889
+          ],
+          "bootstrap_unit": "case"
+        },
+        "score_mae": {
+          "n": 180,
+          "mean": 0.22777777777777777,
+          "ci95": [
+            0.17222222222222222,
+            0.28888888888888886
+          ],
+          "bootstrap_unit": "case"
+        },
+        "winner_consistency": {
+          "numerator": 52,
+          "denominator": 90,
+          "rate": 0.5777777777777777,
+          "ci95": [
+            0.4777777777777778,
+            0.6777777777777778
+          ],
+          "bootstrap_unit": "case"
+        }
+      },
+      "falsifiability": {
+        "score_exact": {
+          "numerator": 154,
+          "denominator": 180,
+          "rate": 0.8555555555555555,
+          "ci95": [
+            0.8055555555555556,
+            0.9
+          ],
+          "bootstrap_unit": "case"
+        },
+        "score_mae": {
+          "n": 180,
+          "mean": 0.15555555555555556,
+          "ci95": [
+            0.10555555555555556,
+            0.2111111111111111
+          ],
+          "bootstrap_unit": "case"
+        },
+        "winner_consistency": {
+          "numerator": 66,
+          "denominator": 90,
+          "rate": 0.7333333333333333,
+          "ci95": [
+            0.6444444444444445,
+            0.8222222222222222
+          ],
+          "bootstrap_unit": "case"
+        }
+      }
+    },
+    "score_sum_winner_consistency": {
+      "numerator": 59,
+      "denominator": 90,
+      "rate": 0.6555555555555556,
+      "ci95": [
+        0.5555555555555556,
+        0.7555555555555555
+      ],
+      "bootstrap_unit": "case"
+    },
+    "structured_overall_winner_consistency": {
+      "numerator": 65,
+      "denominator": 90,
+      "rate": 0.7222222222222222,
+      "ci95": [
+        0.6333333333333333,
+        0.8111111111111111
+      ],
+      "bootstrap_unit": "case"
+    },
+    "dimension_majority_winner_consistency": {
+      "numerator": 58,
+      "denominator": 90,
+      "rate": 0.6444444444444445,
+      "ci95": [
+        0.5444444444444444,
+        0.7444444444444445
+      ],
+      "bootstrap_unit": "case"
+    },
+    "confidence_consistency": {
+      "numerator": 88,
+      "denominator": 90,
+      "rate": 0.9777777777777777,
+      "ci95": [
+        0.9444444444444444,
+        1.0
+      ],
+      "bootstrap_unit": "case"
+    },
+    "by_stability": {
+      "order-stable": {
+        "cases": 60,
+        "per_dimension": {
+          "grounding": {
+            "score_exact": {
+              "numerator": 103,
+              "denominator": 120,
+              "rate": 0.8583333333333333,
+              "ci95": [
+                0.8,
+                0.9166666666666666
+              ],
+              "bootstrap_unit": "case"
+            },
+            "score_mae": {
+              "n": 120,
+              "mean": 0.14166666666666666,
+              "ci95": [
+                0.09166666666666666,
+                0.2
+              ],
+              "bootstrap_unit": "case"
+            },
+            "winner_consistency": {
+              "numerator": 44,
+              "denominator": 60,
+              "rate": 0.7333333333333333,
+              "ci95": [
+                0.6166666666666667,
+                0.8333333333333334
+              ],
+              "bootstrap_unit": "case"
+            }
+          },
+          "hypothesis_specificity": {
+            "score_exact": {
+              "numerator": 110,
+              "denominator": 120,
+              "rate": 0.9166666666666666,
+              "ci95": [
+                0.8666666666666667,
+                0.9583333333333334
+              ],
+              "bootstrap_unit": "case"
+            },
+            "score_mae": {
+              "n": 120,
+              "mean": 0.08333333333333333,
+              "ci95": [
+                0.041666666666666664,
+                0.13333333333333333
+              ],
+              "bootstrap_unit": "case"
+            },
+            "winner_consistency": {
+              "numerator": 51,
+              "denominator": 60,
+              "rate": 0.85,
+              "ci95": [
+                0.75,
+                0.9333333333333333
+              ],
+              "bootstrap_unit": "case"
+            }
+          },
+          "minimality_feasibility": {
+            "score_exact": {
+              "numerator": 92,
+              "denominator": 120,
+              "rate": 0.7666666666666667,
+              "ci95": [
+                0.6833333333333333,
+                0.8416666666666667
+              ],
+              "bootstrap_unit": "case"
+            },
+            "score_mae": {
+              "n": 120,
+              "mean": 0.24166666666666667,
+              "ci95": [
+                0.15833333333333333,
+                0.325
+              ],
+              "bootstrap_unit": "case"
+            },
+            "winner_consistency": {
+              "numerator": 44,
+              "denominator": 60,
+              "rate": 0.7333333333333333,
+              "ci95": [
+                0.6166666666666667,
+                0.8333333333333334
+              ],
+              "bootstrap_unit": "case"
+            }
+          },
+          "decisive_metric": {
+            "score_exact": {
+              "numerator": 96,
+              "denominator": 120,
+              "rate": 0.8,
+              "ci95": [
+                0.7416666666666667,
+                0.8583333333333333
+              ],
+              "bootstrap_unit": "case"
+            },
+            "score_mae": {
+              "n": 120,
+              "mean": 0.20833333333333334,
+              "ci95": [
+                0.14166666666666666,
+                0.275
+              ],
+              "bootstrap_unit": "case"
+            },
+            "winner_consistency": {
+              "numerator": 36,
+              "denominator": 60,
+              "rate": 0.6,
+              "ci95": [
+                0.48333333333333334,
+                0.7166666666666667
+              ],
+              "bootstrap_unit": "case"
+            }
+          },
+          "falsifiability": {
+            "score_exact": {
+              "numerator": 104,
+              "denominator": 120,
+              "rate": 0.8666666666666667,
+              "ci95": [
+                0.8,
+                0.925
+              ],
+              "bootstrap_unit": "case"
+            },
+            "score_mae": {
+              "n": 120,
+              "mean": 0.14166666666666666,
+              "ci95": [
+                0.075,
+                0.20833333333333334
+              ],
+              "bootstrap_unit": "case"
+            },
+            "winner_consistency": {
+              "numerator": 46,
+              "denominator": 60,
+              "rate": 0.7666666666666667,
+              "ci95": [
+                0.65,
+                0.8666666666666667
+              ],
+              "bootstrap_unit": "case"
+            }
+          }
+        },
+        "score_sum_winner_consistency": {
+          "numerator": 47,
+          "denominator": 60,
+          "rate": 0.7833333333333333,
+          "ci95": [
+            0.6833333333333333,
+            0.8833333333333333
+          ],
+          "bootstrap_unit": "case"
+        },
+        "structured_overall_winner_consistency": {
+          "numerator": 52,
+          "denominator": 60,
+          "rate": 0.8666666666666667,
+          "ci95": [
+            0.7666666666666667,
+            0.95
+          ],
+          "bootstrap_unit": "case"
+        },
+        "confidence_consistency": {
+          "numerator": 59,
+          "denominator": 60,
+          "rate": 0.9833333333333333,
+          "ci95": [
+            0.95,
+            1.0
+          ],
+          "bootstrap_unit": "case"
+        }
+      },
+      "order-unstable": {
+        "cases": 30,
+        "per_dimension": {
+          "grounding": {
+            "score_exact": {
+              "numerator": 51,
+              "denominator": 60,
+              "rate": 0.85,
+              "ci95": [
+                0.75,
+                0.9333333333333333
+              ],
+              "bootstrap_unit": "case"
+            },
+            "score_mae": {
+              "n": 60,
+              "mean": 0.15,
+              "ci95": [
+                0.06666666666666667,
+                0.25
+              ],
+              "bootstrap_unit": "case"
+            },
+            "winner_consistency": {
+              "numerator": 22,
+              "denominator": 30,
+              "rate": 0.7333333333333333,
+              "ci95": [
+                0.5666666666666667,
+                0.8666666666666667
+              ],
+              "bootstrap_unit": "case"
+            }
+          },
+          "hypothesis_specificity": {
+            "score_exact": {
+              "numerator": 57,
+              "denominator": 60,
+              "rate": 0.95,
+              "ci95": [
+                0.8833333333333333,
+                1.0
+              ],
+              "bootstrap_unit": "case"
+            },
+            "score_mae": {
+              "n": 60,
+              "mean": 0.06666666666666667,
+              "ci95": [
+                0.0,
+                0.15
+              ],
+              "bootstrap_unit": "case"
+            },
+            "winner_consistency": {
+              "numerator": 27,
+              "denominator": 30,
+              "rate": 0.9,
+              "ci95": [
+                0.7666666666666667,
+                1.0
+              ],
+              "bootstrap_unit": "case"
+            }
+          },
+          "minimality_feasibility": {
+            "score_exact": {
+              "numerator": 33,
+              "denominator": 60,
+              "rate": 0.55,
+              "ci95": [
+                0.4,
+                0.7
+              ],
+              "bootstrap_unit": "case"
+            },
+            "score_mae": {
+              "n": 60,
+              "mean": 0.4666666666666667,
+              "ci95": [
+                0.31666666666666665,
+                0.6333333333333333
+              ],
+              "bootstrap_unit": "case"
+            },
+            "winner_consistency": {
+              "numerator": 13,
+              "denominator": 30,
+              "rate": 0.43333333333333335,
+              "ci95": [
+                0.26666666666666666,
+                0.6
+              ],
+              "bootstrap_unit": "case"
+            }
+          },
+          "decisive_metric": {
+            "score_exact": {
+              "numerator": 46,
+              "denominator": 60,
+              "rate": 0.7666666666666667,
+              "ci95": [
+                0.6833333333333333,
+                0.85
+              ],
+              "bootstrap_unit": "case"
+            },
+            "score_mae": {
+              "n": 60,
+              "mean": 0.26666666666666666,
+              "ci95": [
+                0.16666666666666666,
+                0.38333333333333336
+              ],
+              "bootstrap_unit": "case"
+            },
+            "winner_consistency": {
+              "numerator": 16,
+              "denominator": 30,
+              "rate": 0.5333333333333333,
+              "ci95": [
+                0.36666666666666664,
+                0.7
+              ],
+              "bootstrap_unit": "case"
+            }
+          },
+          "falsifiability": {
+            "score_exact": {
+              "numerator": 50,
+              "denominator": 60,
+              "rate": 0.8333333333333334,
+              "ci95": [
+                0.75,
+                0.9166666666666666
+              ],
+              "bootstrap_unit": "case"
+            },
+            "score_mae": {
+              "n": 60,
+              "mean": 0.18333333333333332,
+              "ci95": [
+                0.08333333333333333,
+                0.2833333333333333
+              ],
+              "bootstrap_unit": "case"
+            },
+            "winner_consistency": {
+              "numerator": 20,
+              "denominator": 30,
+              "rate": 0.6666666666666666,
+              "ci95": [
+                0.5,
+                0.8333333333333334
+              ],
+              "bootstrap_unit": "case"
+            }
+          }
+        },
+        "score_sum_winner_consistency": {
+          "numerator": 12,
+          "denominator": 30,
+          "rate": 0.4,
+          "ci95": [
+            0.23333333333333334,
+            0.5666666666666667
+          ],
+          "bootstrap_unit": "case"
+        },
+        "structured_overall_winner_consistency": {
+          "numerator": 13,
+          "denominator": 30,
+          "rate": 0.43333333333333335,
+          "ci95": [
+            0.26666666666666666,
+            0.6
+          ],
+          "bootstrap_unit": "case"
+        },
+        "confidence_consistency": {
+          "numerator": 29,
+          "denominator": 30,
+          "rate": 0.9666666666666667,
+          "ci95": [
+            0.9,
+            1.0
+          ],
+          "bootstrap_unit": "case"
+        }
+      }
+    }
+  },
+  "dimension_margins": {
+    "grounding": {
+      "absolute_margin": {
+        "n": 180,
+        "mean": 0.23333333333333334,
+        "ci95": [
+          0.16111111111111112,
+          0.3111111111111111
+        ],
+        "bootstrap_unit": "case"
+      },
+      "holistic_winner_signed_margin": {
+        "n": 180,
+        "mean": 0.17777777777777778,
+        "ci95": [
+          0.1054166666666668,
+          0.2611111111111111
+        ],
+        "bootstrap_unit": "case"
+      },
+      "by_stability": {
+        "order-stable": {
+          "n": 120,
+          "mean": 0.275,
+          "ci95": [
+            0.18333333333333332,
+            0.375
+          ],
+          "bootstrap_unit": "case"
+        },
+        "order-unstable": {
+          "n": 60,
+          "mean": 0.15,
+          "ci95": [
+            0.06666666666666667,
+            0.25
+          ],
+          "bootstrap_unit": "case"
+        }
+      },
+      "by_confidence": {
+        "low": {
+          "n": 0,
+          "mean": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "bootstrap_unit": "case"
+        },
+        "medium": {
+          "n": 2,
+          "mean": 0.5,
+          "ci95": [
+            0.0,
+            1.0
+          ],
+          "bootstrap_unit": "case"
+        },
+        "high": {
+          "n": 178,
+          "mean": 0.2303370786516854,
+          "ci95": [
+            0.16110632183908047,
+            0.30286998394863546
+          ],
+          "bootstrap_unit": "case"
+        }
+      },
+      "non_tie_winner_frequency": {
+        "numerator": 41,
+        "denominator": 180,
+        "rate": 0.22777777777777777,
+        "ci95": [
+          0.16111111111111112,
+          0.3
+        ],
+        "bootstrap_unit": "case"
+      },
+      "sole_non_tie_dimension_frequency": {
+        "numerator": 12,
+        "denominator": 180,
+        "rate": 0.06666666666666667,
+        "ci95": [
+          0.027777777777777776,
+          0.1111111111111111
+        ],
+        "bootstrap_unit": "case"
+      }
+    },
+    "hypothesis_specificity": {
+      "absolute_margin": {
+        "n": 180,
+        "mean": 0.14444444444444443,
+        "ci95": [
+          0.08333333333333333,
+          0.2111111111111111
+        ],
+        "bootstrap_unit": "case"
+      },
+      "holistic_winner_signed_margin": {
+        "n": 180,
+        "mean": 0.13333333333333333,
+        "ci95": [
+          0.07222222222222222,
+          0.2
+        ],
+        "bootstrap_unit": "case"
+      },
+      "by_stability": {
+        "order-stable": {
+          "n": 120,
+          "mean": 0.16666666666666666,
+          "ci95": [
+            0.08333333333333333,
+            0.25
+          ],
+          "bootstrap_unit": "case"
+        },
+        "order-unstable": {
+          "n": 60,
+          "mean": 0.1,
+          "ci95": [
+            0.016666666666666666,
+            0.2
+          ],
+          "bootstrap_unit": "case"
+        }
+      },
+      "by_confidence": {
+        "low": {
+          "n": 0,
+          "mean": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "bootstrap_unit": "case"
+        },
+        "medium": {
+          "n": 2,
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_unit": "case"
+        },
+        "high": {
+          "n": 178,
+          "mean": 0.14606741573033707,
+          "ci95": [
+            0.08379888268156424,
+            0.21787709497206703
+          ],
+          "bootstrap_unit": "case"
+        }
+      },
+      "non_tie_winner_frequency": {
+        "numerator": 24,
+        "denominator": 180,
+        "rate": 0.13333333333333333,
+        "ci95": [
+          0.07777777777777778,
+          0.19444444444444445
+        ],
+        "bootstrap_unit": "case"
+      },
+      "sole_non_tie_dimension_frequency": {
+        "numerator": 3,
+        "denominator": 180,
+        "rate": 0.016666666666666666,
+        "ci95": [
+          0.0,
+          0.044444444444444446
+        ],
+        "bootstrap_unit": "case"
+      }
+    },
+    "minimality_feasibility": {
+      "absolute_margin": {
+        "n": 180,
+        "mean": 0.8166666666666667,
+        "ci95": [
+          0.7222222222222222,
+          0.9111111111111111
+        ],
+        "bootstrap_unit": "case"
+      },
+      "holistic_winner_signed_margin": {
+        "n": 180,
+        "mean": 0.6055555555555555,
+        "ci95": [
+          0.4777777777777778,
+          0.7277777777777777
+        ],
+        "bootstrap_unit": "case"
+      },
+      "by_stability": {
+        "order-stable": {
+          "n": 120,
+          "mean": 0.8583333333333333,
+          "ci95": [
+            0.7333333333333333,
+            0.975
+          ],
+          "bootstrap_unit": "case"
+        },
+        "order-unstable": {
+          "n": 60,
+          "mean": 0.7333333333333333,
+          "ci95": [
+            0.5833333333333334,
+            0.8833333333333333
+          ],
+          "bootstrap_unit": "case"
+        }
+      },
+      "by_confidence": {
+        "low": {
+          "n": 0,
+          "mean": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "bootstrap_unit": "case"
+        },
+        "medium": {
+          "n": 2,
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_unit": "case"
+        },
+        "high": {
+          "n": 178,
+          "mean": 0.8258426966292135,
+          "ci95": [
+            0.7288135593220338,
+            0.9209039548022598
+          ],
+          "bootstrap_unit": "case"
+        }
+      },
+      "non_tie_winner_frequency": {
+        "numerator": 133,
+        "denominator": 180,
+        "rate": 0.7388888888888889,
+        "ci95": [
+          0.6611111111111111,
+          0.8111111111111111
+        ],
+        "bootstrap_unit": "case"
+      },
+      "sole_non_tie_dimension_frequency": {
+        "numerator": 64,
+        "denominator": 180,
+        "rate": 0.35555555555555557,
+        "ci95": [
+          0.2777777777777778,
+          0.43333333333333335
+        ],
+        "bootstrap_unit": "case"
+      }
+    },
+    "decisive_metric": {
+      "absolute_margin": {
+        "n": 180,
+        "mean": 0.3388888888888889,
+        "ci95": [
+          0.26666666666666666,
+          0.4111111111111111
+        ],
+        "bootstrap_unit": "case"
+      },
+      "holistic_winner_signed_margin": {
+        "n": 180,
+        "mean": 0.2611111111111111,
+        "ci95": [
+          0.18333333333333332,
+          0.3388888888888889
+        ],
+        "bootstrap_unit": "case"
+      },
+      "by_stability": {
+        "order-stable": {
+          "n": 120,
+          "mean": 0.325,
+          "ci95": [
+            0.24166666666666667,
+            0.4166666666666667
+          ],
+          "bootstrap_unit": "case"
+        },
+        "order-unstable": {
+          "n": 60,
+          "mean": 0.36666666666666664,
+          "ci95": [
+            0.23333333333333334,
+            0.5
+          ],
+          "bootstrap_unit": "case"
+        }
+      },
+      "by_confidence": {
+        "low": {
+          "n": 0,
+          "mean": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "bootstrap_unit": "case"
+        },
+        "medium": {
+          "n": 2,
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_unit": "case"
+        },
+        "high": {
+          "n": 178,
+          "mean": 0.34269662921348315,
+          "ci95": [
+            0.2696629213483146,
+            0.4180790960451977
+          ],
+          "bootstrap_unit": "case"
+        }
+      },
+      "non_tie_winner_frequency": {
+        "numerator": 58,
+        "denominator": 180,
+        "rate": 0.32222222222222224,
+        "ci95": [
+          0.25555555555555554,
+          0.39444444444444443
+        ],
+        "bootstrap_unit": "case"
+      },
+      "sole_non_tie_dimension_frequency": {
+        "numerator": 8,
+        "denominator": 180,
+        "rate": 0.044444444444444446,
+        "ci95": [
+          0.011111111111111112,
+          0.08333333333333333
+        ],
+        "bootstrap_unit": "case"
+      }
+    },
+    "falsifiability": {
+      "absolute_margin": {
+        "n": 180,
+        "mean": 0.2222222222222222,
+        "ci95": [
+          0.14444444444444443,
+          0.3111111111111111
+        ],
+        "bootstrap_unit": "case"
+      },
+      "holistic_winner_signed_margin": {
+        "n": 180,
+        "mean": 0.16666666666666666,
+        "ci95": [
+          0.1,
+          0.24444444444444444
+        ],
+        "bootstrap_unit": "case"
+      },
+      "by_stability": {
+        "order-stable": {
+          "n": 120,
+          "mean": 0.19166666666666668,
+          "ci95": [
+            0.1,
+            0.3
+          ],
+          "bootstrap_unit": "case"
+        },
+        "order-unstable": {
+          "n": 60,
+          "mean": 0.2833333333333333,
+          "ci95": [
+            0.13333333333333333,
+            0.45
+          ],
+          "bootstrap_unit": "case"
+        }
+      },
+      "by_confidence": {
+        "low": {
+          "n": 0,
+          "mean": null,
+          "ci95": [
+            null,
+            null
+          ],
+          "bootstrap_unit": "case"
+        },
+        "medium": {
+          "n": 2,
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_unit": "case"
+        },
+        "high": {
+          "n": 178,
+          "mean": 0.2247191011235955,
+          "ci95": [
+            0.1452513966480447,
+            0.3146067415730337
+          ],
+          "bootstrap_unit": "case"
+        }
+      },
+      "non_tie_winner_frequency": {
+        "numerator": 33,
+        "denominator": 180,
+        "rate": 0.18333333333333332,
+        "ci95": [
+          0.12222222222222222,
+          0.24444444444444444
+        ],
+        "bootstrap_unit": "case"
+      },
+      "sole_non_tie_dimension_frequency": {
+        "numerator": 1,
+        "denominator": 180,
+        "rate": 0.005555555555555556,
+        "ci95": [
+          0.0,
+          0.016666666666666666
+        ],
+        "bootstrap_unit": "case"
+      }
+    }
+  },
+  "controls": {
+    "winner_methods": {
+      "structured_overall": {
+        "numerator": 8,
+        "denominator": 8,
+        "rate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "bootstrap_unit": "case"
+      },
+      "score_sum": {
+        "numerator": 8,
+        "denominator": 8,
+        "rate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "bootstrap_unit": "case"
+      },
+      "dimension_majority": {
+        "numerator": 8,
+        "denominator": 8,
+        "rate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "bootstrap_unit": "case"
+      }
+    },
+    "dimension_real_minus_naive_margin": {
+      "grounding": {
+        "n": 8,
+        "mean": 2.0,
+        "ci95": [
+          2.0,
+          2.0
+        ],
+        "bootstrap_unit": "case"
+      },
+      "hypothesis_specificity": {
+        "n": 8,
+        "mean": 2.0,
+        "ci95": [
+          2.0,
+          2.0
+        ],
+        "bootstrap_unit": "case"
+      },
+      "minimality_feasibility": {
+        "n": 8,
+        "mean": 2.0,
+        "ci95": [
+          2.0,
+          2.0
+        ],
+        "bootstrap_unit": "case"
+      },
+      "decisive_metric": {
+        "n": 8,
+        "mean": 2.0,
+        "ci95": [
+          2.0,
+          2.0
+        ],
+        "bootstrap_unit": "case"
+      },
+      "falsifiability": {
+        "n": 8,
+        "mean": 2.0,
+        "ci95": [
+          2.0,
+          2.0
+        ],
+        "bootstrap_unit": "case"
+      }
+    },
+    "per_case": [
+      {
+        "case_id": "t2_formal_022",
+        "structured_real_wins": 2,
+        "score_sum_real_wins": 2,
+        "dimension_majority_real_wins": 2,
+        "orders": 2,
+        "original": {
+          "structured_overall": true,
+          "score_sum": true,
+          "dimension_majority": true
+        },
+        "reverse": {
+          "structured_overall": true,
+          "score_sum": true,
+          "dimension_majority": true
+        }
+      },
+      {
+        "case_id": "t2_formal_029",
+        "structured_real_wins": 2,
+        "score_sum_real_wins": 2,
+        "dimension_majority_real_wins": 2,
+        "orders": 2,
+        "original": {
+          "structured_overall": true,
+          "score_sum": true,
+          "dimension_majority": true
+        },
+        "reverse": {
+          "structured_overall": true,
+          "score_sum": true,
+          "dimension_majority": true
+        }
+      },
+      {
+        "case_id": "t2_formal_046",
+        "structured_real_wins": 2,
+        "score_sum_real_wins": 2,
+        "dimension_majority_real_wins": 2,
+        "orders": 2,
+        "original": {
+          "structured_overall": true,
+          "score_sum": true,
+          "dimension_majority": true
+        },
+        "reverse": {
+          "structured_overall": true,
+          "score_sum": true,
+          "dimension_majority": true
+        }
+      },
+      {
+        "case_id": "t2_formal_071",
+        "structured_real_wins": 2,
+        "score_sum_real_wins": 2,
+        "dimension_majority_real_wins": 2,
+        "orders": 2,
+        "original": {
+          "structured_overall": true,
+          "score_sum": true,
+          "dimension_majority": true
+        },
+        "reverse": {
+          "structured_overall": true,
+          "score_sum": true,
+          "dimension_majority": true
+        }
+      }
+    ]
+  },
+  "human_alignment": {
+    "status": "out_of_scope",
+    "handled_in": "separate_session",
+    "human_files_read": false
+  },
+  "case_audit": [
+    {
+      "case_id": "t2_formal_003",
+      "stability": "order-unstable",
+      "sampling_stability": "order-unstable",
+      "holistic_o_r": [
+        "B",
+        "B"
+      ],
+      "structured_o_r": [
+        "A",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 1,
+          "reverse": 1
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "holistic_vs_structured",
+        "high_confidence_holistic_disagreement"
+      ]
+    },
+    {
+      "case_id": "t2_formal_005",
+      "stability": "order-stable",
+      "sampling_stability": "order-stable",
+      "holistic_o_r": [
+        "A",
+        "B"
+      ],
+      "structured_o_r": [
+        "A",
+        "B"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "tie"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 1,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 1,
+          "reverse": 0
+        },
+        "decisive_metric": {
+          "original": 1,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "structured_vs_score_sum"
+      ]
+    },
+    {
+      "case_id": "t2_formal_008",
+      "stability": "order-unstable",
+      "sampling_stability": "order-unstable",
+      "holistic_o_r": [
+        "A",
+        "A"
+      ],
+      "structured_o_r": [
+        "A",
+        "B"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "B"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 1,
+          "reverse": -1
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "holistic_vs_structured",
+        "high_confidence_holistic_disagreement"
+      ]
+    },
+    {
+      "case_id": "t2_formal_009",
+      "stability": "order-stable",
+      "sampling_stability": "order-stable",
+      "holistic_o_r": [
+        "B",
+        "A"
+      ],
+      "structured_o_r": [
+        "B",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "B",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 1
+        },
+        "hypothesis_specificity": {
+          "original": -1,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 0,
+          "reverse": 1
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": -1,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "falsifiability_order_flip"
+      ]
+    },
+    {
+      "case_id": "t2_formal_011",
+      "stability": "order-unstable",
+      "sampling_stability": "order-unstable",
+      "holistic_o_r": [
+        "A",
+        "A"
+      ],
+      "structured_o_r": [
+        "A",
+        "B"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "B"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 1,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 0,
+          "reverse": -1
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "holistic_vs_structured",
+        "high_confidence_holistic_disagreement"
+      ]
+    },
+    {
+      "case_id": "t2_formal_012",
+      "stability": "order-stable",
+      "sampling_stability": "order-stable",
+      "holistic_o_r": [
+        "A",
+        "B"
+      ],
+      "structured_o_r": [
+        "A",
+        "tie"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "tie"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 1,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 1,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 1,
+          "reverse": 0
+        },
+        "decisive_metric": {
+          "original": 1,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "holistic_vs_structured",
+        "high_confidence_holistic_disagreement"
+      ]
+    },
+    {
+      "case_id": "t2_formal_018",
+      "stability": "order-stable",
+      "sampling_stability": "order-stable",
+      "holistic_o_r": [
+        "A",
+        "B"
+      ],
+      "structured_o_r": [
+        "A",
+        "B"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "B"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 1,
+          "reverse": -1
+        },
+        "minimality_feasibility": {
+          "original": 1,
+          "reverse": -1
+        },
+        "decisive_metric": {
+          "original": 1,
+          "reverse": -1
+        },
+        "falsifiability": {
+          "original": 1,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "falsifiability_order_flip"
+      ]
+    },
+    {
+      "case_id": "t2_formal_019",
+      "stability": "order-unstable",
+      "sampling_stability": "order-unstable",
+      "holistic_o_r": [
+        "A",
+        "A"
+      ],
+      "structured_o_r": [
+        "A",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": -1,
+          "reverse": 2
+        },
+        "decisive_metric": {
+          "original": 1,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 1,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "falsifiability_order_flip"
+      ]
+    },
+    {
+      "case_id": "t2_formal_020",
+      "stability": "order-unstable",
+      "sampling_stability": "order-unstable",
+      "holistic_o_r": [
+        "A",
+        "A"
+      ],
+      "structured_o_r": [
+        "A",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 2,
+          "reverse": 1
+        },
+        "decisive_metric": {
+          "original": 2,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 1,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "large_order_score_change",
+        "falsifiability_order_flip"
+      ]
+    },
+    {
+      "case_id": "t2_formal_024",
+      "stability": "order-unstable",
+      "sampling_stability": "order-unstable",
+      "holistic_o_r": [
+        "A",
+        "A"
+      ],
+      "structured_o_r": [
+        "A",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "tie"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 1,
+          "reverse": 0
+        },
+        "decisive_metric": {
+          "original": 1,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "structured_vs_score_sum"
+      ]
+    },
+    {
+      "case_id": "t2_formal_025",
+      "stability": "order-stable",
+      "sampling_stability": "order-stable",
+      "holistic_o_r": [
+        "B",
+        "A"
+      ],
+      "structured_o_r": [
+        "B",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "tie",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 0,
+          "reverse": 1
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "structured_vs_score_sum"
+      ]
+    },
+    {
+      "case_id": "t2_formal_026",
+      "stability": "order-stable",
+      "sampling_stability": "order-stable",
+      "holistic_o_r": [
+        "B",
+        "A"
+      ],
+      "structured_o_r": [
+        "A",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 1
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 1,
+          "reverse": 1
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 1
+        }
+      },
+      "issues": [
+        "holistic_vs_structured",
+        "large_order_score_change",
+        "high_confidence_holistic_disagreement",
+        "falsifiability_order_flip"
+      ]
+    },
+    {
+      "case_id": "t2_formal_028",
+      "stability": "order-unstable",
+      "sampling_stability": "order-unstable",
+      "holistic_o_r": [
+        "A",
+        "A"
+      ],
+      "structured_o_r": [
+        "A",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "tie",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 1
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 1,
+          "reverse": 0
+        },
+        "decisive_metric": {
+          "original": 1,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": -2,
+          "reverse": 2
+        }
+      },
+      "issues": [
+        "structured_vs_score_sum"
+      ]
+    },
+    {
+      "case_id": "t2_formal_031",
+      "stability": "order-unstable",
+      "sampling_stability": "order-unstable",
+      "holistic_o_r": [
+        "A",
+        "A"
+      ],
+      "structured_o_r": [
+        "B",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "B",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": -1,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": -1,
+          "reverse": 1
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "holistic_vs_structured",
+        "high_confidence_holistic_disagreement"
+      ]
+    },
+    {
+      "case_id": "t2_formal_034",
+      "stability": "order-stable",
+      "sampling_stability": "order-stable",
+      "holistic_o_r": [
+        "A",
+        "B"
+      ],
+      "structured_o_r": [
+        "A",
+        "B"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "tie"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 1,
+          "reverse": 0
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "structured_vs_score_sum"
+      ]
+    },
+    {
+      "case_id": "t2_formal_035",
+      "stability": "order-unstable",
+      "sampling_stability": "order-unstable",
+      "holistic_o_r": [
+        "A",
+        "A"
+      ],
+      "structured_o_r": [
+        "B",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "B",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 0,
+          "reverse": 0
+        },
+        "decisive_metric": {
+          "original": -1,
+          "reverse": 1
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "holistic_vs_structured",
+        "high_confidence_holistic_disagreement"
+      ]
+    },
+    {
+      "case_id": "t2_formal_037",
+      "stability": "order-stable",
+      "sampling_stability": "order-stable",
+      "holistic_o_r": [
+        "A",
+        "B"
+      ],
+      "structured_o_r": [
+        "A",
+        "B"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "B"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 1,
+          "reverse": -1
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 1,
+          "reverse": -1
+        },
+        "decisive_metric": {
+          "original": 1,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 1,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "falsifiability_order_flip"
+      ]
+    },
+    {
+      "case_id": "t2_formal_038",
+      "stability": "order-stable",
+      "sampling_stability": "order-stable",
+      "holistic_o_r": [
+        "B",
+        "A"
+      ],
+      "structured_o_r": [
+        "B",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "B",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 1
+        },
+        "hypothesis_specificity": {
+          "original": -1,
+          "reverse": 1
+        },
+        "minimality_feasibility": {
+          "original": -1,
+          "reverse": 1
+        },
+        "decisive_metric": {
+          "original": -1,
+          "reverse": 1
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 1
+        }
+      },
+      "issues": [
+        "falsifiability_order_flip"
+      ]
+    },
+    {
+      "case_id": "t2_formal_043",
+      "stability": "order-unstable",
+      "sampling_stability": "order-unstable",
+      "holistic_o_r": [
+        "A",
+        "A"
+      ],
+      "structured_o_r": [
+        "A",
+        "B"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "B"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 1,
+          "reverse": -1
+        },
+        "minimality_feasibility": {
+          "original": 1,
+          "reverse": 1
+        },
+        "decisive_metric": {
+          "original": 1,
+          "reverse": -1
+        },
+        "falsifiability": {
+          "original": 1,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "holistic_vs_structured",
+        "high_confidence_holistic_disagreement",
+        "falsifiability_order_flip"
+      ]
+    },
+    {
+      "case_id": "t2_formal_045",
+      "stability": "order-stable",
+      "sampling_stability": "order-stable",
+      "holistic_o_r": [
+        "A",
+        "B"
+      ],
+      "structured_o_r": [
+        "A",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 1,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 0,
+          "reverse": 0
+        },
+        "decisive_metric": {
+          "original": 1,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 1,
+          "reverse": 1
+        }
+      },
+      "issues": [
+        "holistic_vs_structured",
+        "high_confidence_holistic_disagreement",
+        "falsifiability_order_flip"
+      ]
+    },
+    {
+      "case_id": "t2_formal_047",
+      "stability": "order-stable",
+      "sampling_stability": "order-stable",
+      "holistic_o_r": [
+        "A",
+        "B"
+      ],
+      "structured_o_r": [
+        "A",
+        "B"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "B"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 1,
+          "reverse": -1
+        },
+        "hypothesis_specificity": {
+          "original": 1,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 1,
+          "reverse": -1
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 2,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "large_order_score_change",
+        "falsifiability_order_flip"
+      ]
+    },
+    {
+      "case_id": "t2_formal_048",
+      "stability": "order-stable",
+      "sampling_stability": "order-stable",
+      "holistic_o_r": [
+        "A",
+        "B"
+      ],
+      "structured_o_r": [
+        "A",
+        "B"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "B"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 2,
+          "reverse": -1
+        },
+        "hypothesis_specificity": {
+          "original": 1,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 2,
+          "reverse": -2
+        },
+        "decisive_metric": {
+          "original": 1,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 1,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "falsifiability_order_flip"
+      ]
+    },
+    {
+      "case_id": "t2_formal_049",
+      "stability": "order-unstable",
+      "sampling_stability": "order-unstable",
+      "holistic_o_r": [
+        "A",
+        "A"
+      ],
+      "structured_o_r": [
+        "A",
+        "B"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "B"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 1,
+          "reverse": -1
+        },
+        "decisive_metric": {
+          "original": 1,
+          "reverse": -1
+        },
+        "falsifiability": {
+          "original": 1,
+          "reverse": -1
+        }
+      },
+      "issues": [
+        "holistic_vs_structured",
+        "high_confidence_holistic_disagreement"
+      ]
+    },
+    {
+      "case_id": "t2_formal_050",
+      "stability": "order-unstable",
+      "sampling_stability": "order-unstable",
+      "holistic_o_r": [
+        "A",
+        "A"
+      ],
+      "structured_o_r": [
+        "A",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 2
+        },
+        "minimality_feasibility": {
+          "original": 1,
+          "reverse": 0
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 2
+        }
+      },
+      "issues": [
+        "large_order_score_change",
+        "falsifiability_order_flip"
+      ]
+    },
+    {
+      "case_id": "t2_formal_053",
+      "stability": "order-unstable",
+      "sampling_stability": "order-unstable",
+      "holistic_o_r": [
+        "A",
+        "A"
+      ],
+      "structured_o_r": [
+        "tie",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "tie",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 0,
+          "reverse": 0
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 1
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 1
+        }
+      },
+      "issues": [
+        "holistic_vs_structured",
+        "high_confidence_holistic_disagreement",
+        "falsifiability_order_flip"
+      ]
+    },
+    {
+      "case_id": "t2_formal_054",
+      "stability": "order-stable",
+      "sampling_stability": "order-stable",
+      "holistic_o_r": [
+        "A",
+        "B"
+      ],
+      "structured_o_r": [
+        "A",
+        "tie"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "tie"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 1,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 0,
+          "reverse": 0
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 1,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "holistic_vs_structured",
+        "high_confidence_holistic_disagreement",
+        "falsifiability_order_flip"
+      ]
+    },
+    {
+      "case_id": "t2_formal_055",
+      "stability": "order-stable",
+      "sampling_stability": "order-stable",
+      "holistic_o_r": [
+        "A",
+        "B"
+      ],
+      "structured_o_r": [
+        "A",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 1,
+          "reverse": 1
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "holistic_vs_structured",
+        "high_confidence_holistic_disagreement"
+      ]
+    },
+    {
+      "case_id": "t2_formal_057",
+      "stability": "order-unstable",
+      "sampling_stability": "order-unstable",
+      "holistic_o_r": [
+        "A",
+        "A"
+      ],
+      "structured_o_r": [
+        "B",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "B",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": -1,
+          "reverse": 1
+        },
+        "decisive_metric": {
+          "original": -1,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "holistic_vs_structured",
+        "high_confidence_holistic_disagreement"
+      ]
+    },
+    {
+      "case_id": "t2_formal_060",
+      "stability": "order-unstable",
+      "sampling_stability": "order-unstable",
+      "holistic_o_r": [
+        "A",
+        "A"
+      ],
+      "structured_o_r": [
+        "A",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 1,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 0,
+          "reverse": 0
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 1
+        },
+        "falsifiability": {
+          "original": 1,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "falsifiability_order_flip"
+      ]
+    },
+    {
+      "case_id": "t2_formal_061",
+      "stability": "order-unstable",
+      "sampling_stability": "order-unstable",
+      "holistic_o_r": [
+        "A",
+        "A"
+      ],
+      "structured_o_r": [
+        "B",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "tie",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 0,
+          "reverse": 1
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "holistic_vs_structured",
+        "structured_vs_score_sum",
+        "high_confidence_holistic_disagreement"
+      ]
+    },
+    {
+      "case_id": "t2_formal_062",
+      "stability": "order-stable",
+      "sampling_stability": "order-stable",
+      "holistic_o_r": [
+        "B",
+        "A"
+      ],
+      "structured_o_r": [
+        "B",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "B",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": -2,
+          "reverse": 1
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 2
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "large_order_score_change"
+      ]
+    },
+    {
+      "case_id": "t2_formal_063",
+      "stability": "order-unstable",
+      "sampling_stability": "order-unstable",
+      "holistic_o_r": [
+        "A",
+        "A"
+      ],
+      "structured_o_r": [
+        "B",
+        "tie"
+      ],
+      "score_sum_o_r": [
+        "tie",
+        "tie"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 0,
+          "reverse": 0
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "holistic_vs_structured",
+        "structured_vs_score_sum",
+        "high_confidence_holistic_disagreement"
+      ]
+    },
+    {
+      "case_id": "t2_formal_065",
+      "stability": "order-stable",
+      "sampling_stability": "order-stable",
+      "holistic_o_r": [
+        "B",
+        "A"
+      ],
+      "structured_o_r": [
+        "B",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "B",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": -1,
+          "reverse": 1
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 1
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 1
+        }
+      },
+      "issues": [
+        "falsifiability_order_flip"
+      ]
+    },
+    {
+      "case_id": "t2_formal_070",
+      "stability": "order-stable",
+      "sampling_stability": "order-stable",
+      "holistic_o_r": [
+        "B",
+        "A"
+      ],
+      "structured_o_r": [
+        "A",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 1,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 1,
+          "reverse": 1
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 1
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 1
+        }
+      },
+      "issues": [
+        "holistic_vs_structured",
+        "large_order_score_change",
+        "high_confidence_holistic_disagreement",
+        "falsifiability_order_flip"
+      ]
+    },
+    {
+      "case_id": "t2_formal_072",
+      "stability": "order-stable",
+      "sampling_stability": "order-stable",
+      "holistic_o_r": [
+        "A",
+        "B"
+      ],
+      "structured_o_r": [
+        "A",
+        "B"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "tie"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 1,
+          "reverse": 0
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 1,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "structured_vs_score_sum",
+        "falsifiability_order_flip"
+      ]
+    },
+    {
+      "case_id": "t2_formal_074",
+      "stability": "order-stable",
+      "sampling_stability": "order-stable",
+      "holistic_o_r": [
+        "B",
+        "A"
+      ],
+      "structured_o_r": [
+        "B",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "B",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 0,
+          "reverse": 1
+        },
+        "decisive_metric": {
+          "original": -1,
+          "reverse": 1
+        },
+        "falsifiability": {
+          "original": -1,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "falsifiability_order_flip"
+      ]
+    },
+    {
+      "case_id": "t2_formal_075",
+      "stability": "order-stable",
+      "sampling_stability": "order-stable",
+      "holistic_o_r": [
+        "A",
+        "B"
+      ],
+      "structured_o_r": [
+        "A",
+        "B"
+      ],
+      "score_sum_o_r": [
+        "tie",
+        "B"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 0,
+          "reverse": -1
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "structured_vs_score_sum"
+      ]
+    },
+    {
+      "case_id": "t2_formal_077",
+      "stability": "order-stable",
+      "sampling_stability": "order-stable",
+      "holistic_o_r": [
+        "B",
+        "A"
+      ],
+      "structured_o_r": [
+        "A",
+        "B"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "B"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 1,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 1,
+          "reverse": -2
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "holistic_vs_structured",
+        "high_confidence_holistic_disagreement"
+      ]
+    },
+    {
+      "case_id": "t2_formal_078",
+      "stability": "order-stable",
+      "sampling_stability": "order-stable",
+      "holistic_o_r": [
+        "B",
+        "A"
+      ],
+      "structured_o_r": [
+        "A",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 1,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 0,
+          "reverse": 0
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 1
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "holistic_vs_structured",
+        "high_confidence_holistic_disagreement"
+      ]
+    },
+    {
+      "case_id": "t2_formal_080",
+      "stability": "order-unstable",
+      "sampling_stability": "order-unstable",
+      "holistic_o_r": [
+        "A",
+        "A"
+      ],
+      "structured_o_r": [
+        "B",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "B",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": -1,
+          "reverse": 1
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "holistic_vs_structured",
+        "high_confidence_holistic_disagreement"
+      ]
+    },
+    {
+      "case_id": "t2_formal_082",
+      "stability": "order-stable",
+      "sampling_stability": "order-stable",
+      "holistic_o_r": [
+        "A",
+        "B"
+      ],
+      "structured_o_r": [
+        "A",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 1,
+          "reverse": 1
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "holistic_vs_structured",
+        "high_confidence_holistic_disagreement"
+      ]
+    },
+    {
+      "case_id": "t2_formal_083",
+      "stability": "order-unstable",
+      "sampling_stability": "order-unstable",
+      "holistic_o_r": [
+        "A",
+        "A"
+      ],
+      "structured_o_r": [
+        "A",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 1,
+          "reverse": 1
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 2,
+          "reverse": 0
+        },
+        "decisive_metric": {
+          "original": 1,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 1,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "large_order_score_change",
+        "falsifiability_order_flip"
+      ]
+    },
+    {
+      "case_id": "t2_formal_084",
+      "stability": "order-unstable",
+      "sampling_stability": "order-unstable",
+      "holistic_o_r": [
+        "A",
+        "A"
+      ],
+      "structured_o_r": [
+        "B",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "B",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": -1,
+          "reverse": 1
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 1
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 1
+        }
+      },
+      "issues": [
+        "holistic_vs_structured",
+        "high_confidence_holistic_disagreement",
+        "falsifiability_order_flip"
+      ]
+    },
+    {
+      "case_id": "t2_formal_085",
+      "stability": "order-stable",
+      "sampling_stability": "order-stable",
+      "holistic_o_r": [
+        "B",
+        "A"
+      ],
+      "structured_o_r": [
+        "B",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "B",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 1
+        },
+        "minimality_feasibility": {
+          "original": -1,
+          "reverse": 1
+        },
+        "decisive_metric": {
+          "original": -1,
+          "reverse": 1
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 1
+        }
+      },
+      "issues": [
+        "falsifiability_order_flip"
+      ]
+    },
+    {
+      "case_id": "t2_formal_086",
+      "stability": "order-unstable",
+      "sampling_stability": "order-unstable",
+      "holistic_o_r": [
+        "A",
+        "A"
+      ],
+      "structured_o_r": [
+        "B",
+        "A"
+      ],
+      "score_sum_o_r": [
+        "B",
+        "A"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 1
+        },
+        "minimality_feasibility": {
+          "original": -1,
+          "reverse": 0
+        },
+        "decisive_metric": {
+          "original": -2,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 1
+        }
+      },
+      "issues": [
+        "holistic_vs_structured",
+        "large_order_score_change",
+        "high_confidence_holistic_disagreement",
+        "falsifiability_order_flip"
+      ]
+    },
+    {
+      "case_id": "t2_formal_087",
+      "stability": "order-unstable",
+      "sampling_stability": "order-unstable",
+      "holistic_o_r": [
+        "A",
+        "A"
+      ],
+      "structured_o_r": [
+        "A",
+        "B"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "tie"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 1,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 0,
+          "reverse": 1
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": -1
+        }
+      },
+      "issues": [
+        "holistic_vs_structured",
+        "structured_vs_score_sum",
+        "high_confidence_holistic_disagreement",
+        "falsifiability_order_flip"
+      ]
+    },
+    {
+      "case_id": "t2_formal_092",
+      "stability": "order-unstable",
+      "sampling_stability": "order-unstable",
+      "holistic_o_r": [
+        "A",
+        "A"
+      ],
+      "structured_o_r": [
+        "A",
+        "B"
+      ],
+      "score_sum_o_r": [
+        "A",
+        "B"
+      ],
+      "dimension_margins": {
+        "grounding": {
+          "original": 0,
+          "reverse": 0
+        },
+        "hypothesis_specificity": {
+          "original": 0,
+          "reverse": 0
+        },
+        "minimality_feasibility": {
+          "original": 1,
+          "reverse": -1
+        },
+        "decisive_metric": {
+          "original": 0,
+          "reverse": 0
+        },
+        "falsifiability": {
+          "original": 0,
+          "reverse": 0
+        }
+      },
+      "issues": [
+        "holistic_vs_structured",
+        "high_confidence_holistic_disagreement"
+      ]
+    }
+  ],
+  "case_audit_counts": {
+    "holistic_vs_structured": 25,
+    "high_confidence_holistic_disagreement": 25,
+    "structured_vs_score_sum": 10,
+    "falsifiability_order_flip": 24,
+    "large_order_score_change": 8
+  },
+  "definitions": {
+    "large_order_score_change": "any aligned model-dimension score changes by >=2, or total aligned absolute change across ten scores is >=5",
+    "sole_non_tie_dimension": "this dimension is decisive and all other four dimensions are tied",
+    "control_scope": "lower-anchor sanity check only; excluded from model-vs-model agreement and ranking"
+  },
+  "claim_matrix": [
+    {
+      "claim": "Explicit rubric reproduces holistic preferences",
+      "evidence": "152/180 (0.844; 95% CI 0.789–0.894)",
+      "status": "supported",
+      "safe_paper_wording": "Explicit dimension-level scoring recovered the original holistic preference at the reported case-clustered agreement rate."
+    },
+    {
+      "claim": "Dimension scores are order-robust",
+      "evidence": "structured overall model-winner consistency 65/90 (0.722; 95% CI 0.633–0.811)",
+      "status": "partial",
+      "safe_paper_wording": "Bidirectional auditing yielded the reported order consistency; this measures workflow robustness rather than objective correctness."
+    },
+    {
+      "claim": "Unstable pairs have smaller rubric margins",
+      "evidence": "mean across dimensions: stable=0.363, unstable=0.327; stable higher on 3/5 dimensions",
+      "status": "partial",
+      "safe_paper_wording": "Order-unstable pairs had a slightly smaller mean rubric margin, but the direction was not uniform across dimensions; we treat this as descriptive evidence."
+    },
+    {
+      "claim": "Falsifiability contributes diagnostic signal",
+      "evidence": "non-tie dimension verdict 33/180 (0.183; 95% CI 0.122–0.244)",
+      "status": "partial",
+      "safe_paper_wording": "Falsifiability produced non-tied score differences at the reported frequency, but rarely served as the sole decisive dimension."
+    },
+    {
+      "claim": "Structured Gemini dimensions align with humans",
+      "evidence": "Handled by a separate human-calibration session; no human files were read here.",
+      "status": "out_of_scope",
+      "safe_paper_wording": "No human-alignment claim follows from this automatic audit alone."
+    }
+  ],
+  "paper_facing_wording": {
+    "chinese": "在90个分层抽样的真实模型对上，五维显式评分的 structured overall 与原 holistic Gemini 判断一致 152/180（84.4%），等权 score-sum 一致 145/180（80.6%）。映射回同一模型身份后，structured overall 的正反序一致为 65/90（72.2%）。这些结果衡量显式 rubric 与既有自动判分流程的内部一致性；它们不证明 Gemini 的隐式推理必然采用五个维度，也不建立客观科研质量真值。",
+    "experiments_english": "On a stratified 90-pair audit evaluated in both answer orders, the explicit five-dimension protocol matched the original holistic Gemini verdict on 152/180 ordered judgments (84.4%). The preregistered equal-weight score-sum rule matched on 145/180 (80.6%). After aligning answer identity across orders, the structured overall winner was consistent for 65/90 cases (72.2%). All confidence intervals use 10,000 case-clustered bootstrap resamples.",
+    "limitation_english": "This audit measures consistency between two prompting protocols applied to the same Gemini judge. Agreement does not show that the original holistic judge internally followed each rubric dimension, and disagreement may reflect prompt-induced behavior as well as position sensitivity. The four real-versus-naive controls provide only a lower-anchor sanity check. Human alignment is evaluated separately and is outside this automatic audit."
+  }
+}

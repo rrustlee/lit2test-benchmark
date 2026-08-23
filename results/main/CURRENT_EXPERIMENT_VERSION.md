@@ -70,6 +70,6 @@ Data construction and provenance:
 - Do not cite archived or superseded results as current paper evidence.
 - Do not claim schema as a contribution; use schema as harness structure only.
 - Do not use `accuracy` as shorthand for judge quality or objective idea quality.
-- Do not claim release-ready benchmark or public leaderboard until release governance closes.
+- Do not claim a public leaderboard; this release supports paper reproduction only.
 - Subtle-corruption claim boundary: the audit supports contrast-controlled local sensitivity to naturalistic targeted defects only; it is appendix/rebuttal-strength evidence under the frozen 20-case protocol and must not carry a main-text core claim, judge-accuracy claim, human-equivalence claim, or single-dimension causal claim.
 - The 65-task reverse-orientation defect and its correction must be reported transparently in reproducibility or limitations discussion.

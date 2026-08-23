@@ -1,9 +1,8 @@
 # Second-Judge Revalidation (W2: single-judge concern)
 
-**New experiment.** Run date: 2026-07-28 (Asia/Shanghai). Status: complete,
-**pending allowlist inclusion** (not yet registered in
-`analysis/CURRENT_EXPERIMENT_VERSION.md` / `current_experiment_version.json`).
-Diagnostic only — no release, no leaderboard.
+**Supplementary experiment.** Run date: 2026-07-28. Status: complete.
+Diagnostic only — convergent-validity evidence, not part of the main-result
+allowlist in `results/main/CURRENT_EXPERIMENT_VERSION.md`; no leaderboard.
 
 ## Purpose
 
@@ -25,7 +24,7 @@ with the corrected Gemini verdicts.
   (unlike a GLM-family fallback).
 - Transport: OpenAI-compatible `POST /chat/completions` on
   `${API_BASE_URL}`, `temperature=1.0`, `max_tokens=1200`
-  (pipeline-A chat-judge defaults), timeout 180 s, ≤4 attempts with backoff.
+  (standard chat-judge defaults of this pipeline), timeout 180 s, ≤4 attempts with backoff.
   API key from `API_KEY` env only; never stored or printed.
 
 ## Prompt and task presentation (identical to canonical Gemini runs)

@@ -53,7 +53,7 @@ def load_pairwise_judge(path: Path) -> dict[str, str]:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Aggregate IdeaBench human pairwise responses")
+    parser = argparse.ArgumentParser(description="Aggregate Lit2Test human pairwise responses")
     parser.add_argument("--pairs", default=str(ROOT / "outputs" / "claim_audited_balanced_pairs_smoke.jsonl"))
     parser.add_argument("--responses", default=str(ROOT / "outputs" / "human_review_claim_audited" / "responses_template.csv"))
     parser.add_argument("--template", action="store_true", help="Write a blank response CSV template and exit")
@@ -143,7 +143,7 @@ def main() -> None:
                     judge_agree[name] += 1
 
     lines = [
-        "# IdeaBench Human Review Aggregation",
+        "# Lit2Test Human Review Aggregation",
         "",
         "This report aggregates anonymized human pairwise responses. It is empty or partial until reviewers fill the response CSV.",
         "",

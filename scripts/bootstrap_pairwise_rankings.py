@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bootstrap uncertainty diagnostics for IdeaBench pairwise rankings."""
+"""Bootstrap uncertainty diagnostics for Lit2Test pairwise rankings."""
 
 from __future__ import annotations
 
@@ -120,13 +120,13 @@ def percentile(values: list[float], q: float) -> float:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Bootstrap IdeaBench pairwise ranking uncertainty")
+    parser = argparse.ArgumentParser(description="Bootstrap Lit2Test pairwise ranking uncertainty")
     parser.add_argument("--pairs", required=True)
     parser.add_argument("--judge", action="append", default=[])
     parser.add_argument("--human-responses", default="")
     parser.add_argument("--iterations", type=int, default=2000)
     parser.add_argument("--seed", type=int, default=20260616)
-    parser.add_argument("--title", default="IdeaBench Pairwise Bootstrap Uncertainty Report")
+    parser.add_argument("--title", default="Lit2Test Pairwise Bootstrap Uncertainty Report")
     parser.add_argument("--output", required=True)
     parser.add_argument("--json-output", default="")
     args = parser.parse_args()

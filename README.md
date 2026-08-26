@@ -1,6 +1,6 @@
 # Lit2Test: Code and Data Supplement
 
-Anonymous submission. This package contains the benchmark data, pipeline code, and frozen result artifacts supporting all quantitative claims in the paper.
+Code and data for the paper **[What Proves You Wrong: Benchmarking Language Models on Falsifiable Research Ideation](https://arxiv.org/abs/2608.22948)** (arXiv:2608.22948). This package contains the benchmark data, pipeline code, and frozen result artifacts supporting all quantitative claims in the paper.
 
 ## Package Layout
 
@@ -86,6 +86,20 @@ Every number in the paper can be re-derived from the frozen artifacts under `res
 ## Figure Reproduction
 
 `scripts/plotting/plot_figure3.py` regenerates Figure 3 from the frozen artifacts (adjust the four data paths at the top to point into `results/`).
+
+## Citation
+
+If you use this benchmark or data, please cite:
+
+```bibtex
+@article{wang2026lit2test,
+  title   = {What Proves You Wrong: Benchmarking Language Models on Falsifiable Research Ideation},
+  author  = {Wang, Ziyue and Yuan, Aomufei and Yao, Yiran and Yao, Linli and Zuo, Hongyao and Gong, Ziwen and Liu, Yuanxin and Li, Shicheng and Cai, Yishuo and Yang, Tong and Sun, Xu and Li, Xiaohui and Bai, Haoli},
+  journal = {arXiv preprint arXiv:2608.22948},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2608.22948}
+}
+```
 
 ## License
 
